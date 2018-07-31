@@ -87,12 +87,13 @@
 <meta property="og:site_name" content="♻ ENV">
 <meta property="og:description" content="成为标准网络协议栈的一部分，之后进入 Linux 内核">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/07/31/K0x01-P0x002-C0x0002-O0x00001/20180731224003.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/31/K0x01-P0x002-C0x0002-O0x00001/20180731222525.png">
-<meta property="og:updated_time" content="2018-07-31T14:37:02.183Z">
+<meta property="og:updated_time" content="2018-07-31T14:41:46.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZeroMQ">
 <meta name="twitter:description" content="成为标准网络协议栈的一部分，之后进入 Linux 内核">
-<meta name="twitter:image" content="http://yoursite.com/2018/07/31/K0x01-P0x002-C0x0002-O0x00001/20180731222525.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/31/K0x01-P0x002-C0x0002-O0x00001/20180731224003.png">
 
 
 
@@ -367,6 +368,7 @@
         <blockquote>
 <p>成为标准网络协议栈的一部分，之后进入 Linux 内核<br><a id="more"></a></p>
 </blockquote>
+<h4 id="大脸"><a href="#大脸" class="headerlink" title="大脸"></a>大脸</h4><p>   <img src="/2018/07/31/K0x01-P0x002-C0x0002-O0x00001/20180731224003.png" alt="ZeorMQ"></p>
 <h3 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h3><p>   ZeroMQ是一个简单好用的传输层，像框架一样的一个 socket library，他使得 Socket 编程更加简单、简洁和性能更高。是一个消息处理队列库，可在多个线程、内核和主机盒之间弹性伸缩。ZMQ 的明确目标是“成为标准网络协议栈的一部分，之后进入 Linux 内核”。<br>   Apache 基金会旗下的符合 AMQP/1.0标准的 RabbitMQ 已经得到了广泛的认可，成为领先的 MQ 项目,与 RabbitMQ 相比，ZMQ 并不像是一个传统意义上的消息队列服务器，事实上，它也根本不是一个服务器，它更像是一个底层的网络通讯库，在 Socket API 之上做了一层封装，<strong>将网络通讯、进程通讯和线程通讯抽象为统一的 API 接口</strong>。</p>
 <h3 id="ZMQ是什么"><a href="#ZMQ是什么" class="headerlink" title="ZMQ是什么"></a>ZMQ是什么</h3><p>   它类似于 Socket 的一系列接口，他跟 Socket 的区别是：普通的 socket 是端到端的（1:1的关系），而 ZMQ 却是可以N：M 的关系，人们对 BSD 套接字的了解较多的是点对点的连接，点对点连接需要显式地建立连接、销毁连接、选择协议（TCP/UDP）和处理错误等，而 ZMQ 屏蔽了这些细节，让你的网络编程更为简单。ZMQ 用于 node 与 node 间的通信，node 可以是主机或者是进程。</p>
 <h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>   <strong>简单</strong><br>   1、仅仅提供24个API接口，风格类似于BSD Socket。<br>   2、处理了网络异常，包括连接异常中断、重连等。<br>   3、改变TCP基于字节流收发数据的方式，处理了粘包、半包等问题，以msg为单位收发数据，结合Protocol Buffers，可以对应用层彻底屏蔽网络通信层。<br>   4、对大数据通过SENDMORE/RECVMORE提供分包收发机制。<br>   5、通过线程间数据流动来保证同一时刻任何数据都只会被一个线程持有，以此实现多线程的“去锁化”。<br>   6、通过高水位HWM来控制流量，用交换SWAP来转储内存数据，弥补HWM丢失数据的缺陷。<br>   7、服务器端和客户端的启动没有先后顺序。</p>
@@ -574,7 +576,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景介绍"><span class="nav-number">1.</span> <span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZMQ是什么"><span class="nav-number">2.</span> <span class="nav-text">ZMQ是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">3.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用场景"><span class="nav-number">4.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本模型"><span class="nav-number">5.</span> <span class="nav-text">基本模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Exclusive-Pair"><span class="nav-number">5.1.</span> <span class="nav-text">Exclusive-Pair</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Reply"><span class="nav-number">5.2.</span> <span class="nav-text">Request-Reply</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Publisher-Subscriber"><span class="nav-number">5.3.</span> <span class="nav-text">Publisher-Subscriber</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parallel-Pipeline"><span class="nav-number">5.4.</span> <span class="nav-text">Parallel Pipeline</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Push-Pull"><span class="nav-number">5.5.</span> <span class="nav-text">Push-Pull</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#大脸"><span class="nav-number">1.</span> <span class="nav-text">大脸</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景介绍"><span class="nav-number"></span> <span class="nav-text">背景介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZMQ是什么"><span class="nav-number"></span> <span class="nav-text">ZMQ是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number"></span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用场景"><span class="nav-number"></span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本模型"><span class="nav-number"></span> <span class="nav-text">基本模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Exclusive-Pair"><span class="nav-number">1.</span> <span class="nav-text">Exclusive-Pair</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Request-Reply"><span class="nav-number">2.</span> <span class="nav-text">Request-Reply</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Publisher-Subscriber"><span class="nav-number">3.</span> <span class="nav-text">Publisher-Subscriber</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parallel-Pipeline"><span class="nav-number">4.</span> <span class="nav-text">Parallel Pipeline</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Push-Pull"><span class="nav-number">5.</span> <span class="nav-text">Push-Pull</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></div>
             
 
           </div>
