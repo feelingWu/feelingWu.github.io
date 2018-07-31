@@ -89,7 +89,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/07/22/K0x01-P0x002-C0x0001-O0x00001/20180722112930.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/22/K0x01-P0x002-C0x0001-O0x00001/20180722112949.png">
-<meta property="og:updated_time" content="2018-07-22T03:53:48.922Z">
+<meta property="og:updated_time" content="2018-07-23T02:32:09.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="精通比特币">
 <meta name="twitter:description" content="精通比特币，Andreas•M•Antonopoulos (O’Reilly)。版权2015 Andreas•M•Antonopoulos, 978-1-449-37404-4.    原文链接">
@@ -377,7 +377,8 @@
 <p>   此图标表示预警或警告。<br>   <img src="/2018/07/22/K0x01-P0x002-C0x0001-O0x00001/20180722112949.png" alt="note"></p>
 <h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><p>   本书示例是基于类Unix操作系统（例如Linux或Mac OS X）的命令行，用Python，C++编程语言来说明的。全部代码段均可在<a href="https://github.com/bitcoinbook/bitcoinbook" target="_blank" rel="noopener">Github主代码库</a> 中的code子目录获得。读者可以通过GitHub创建自己的代码分支，尝试书中示例，或者提交代码更正。<br>   所有代码段在大多数操作系统上都可以通过最小化安装对应语言的编译器和解释器来重现。在必要的地方，本书还提供了基本的安装指令以及每步指令输出的结果。<br>   为了便于打印，本书重新格式化了部分代码段和代码输出。在所有此类例子中，每行代码以反斜杠（\）字符和换行符分开。当你需要尝试这些示例时，请删除这两个字符的，把被分隔的两行重连起来，就可以看到与例子中一致的结果了。<br>   本书所有代码段尽可能地采用实值计算，因此你可以通过重复构建本书提供的代码示例，用你自己写的代码计算出相同的结果。譬如，书中出现的私钥和对应的公钥及地址也都是真实存在的。示例中的所有交易、区块和区块链均被记录在实际的比特币区块链中，是公共账目的一部分，因而你可以在任何比特币系统中检查它们。</p>
 <h2 id="使用代码示例"><a href="#使用代码示例" class="headerlink" title="使用代码示例"></a>使用代码示例</h2><p>   本书的目的是帮助你完成工作。总的来说，你可以在你的程序和文档中使用本书的代码示例。除非你要复制代码的关键部分，否则不需要联系我们获得许可。例如，使用程序中的几段代码，或者引用本书及代码来回答问题是不需要获准的；而售卖或分发包含O’Reilly书中代码示例的光盘，或者将大量书中代码合并于你的产品或文档则必须获得我们的许可。<br>   我们鼓励、但不强制要求您在引用本书时表明出处。书目引用格式通常包括书名、作者、出版商、ISBN。例如:“精通比特币，Andreas•M•Antonopoulos (O’Reilly)。版权2015 Andreas•M•Antonopoulos, 978-1-449-37404-4.”<br>   本书某些版本提供了开源许可，如CC-BY-NC，这种情况下，开源许可条款适用。<br>   如果你觉得你对本书代码示例的使用超出了合理范围或上述许可，请随时与我们联系：<a href="mailto:permissions@oreilly.com" target="_blank" rel="noopener">permissions@oreilly.com</a></p>
-
+<h1 id="密钥、地址、钱包"><a href="#密钥、地址、钱包" class="headerlink" title="密钥、地址、钱包"></a>密钥、地址、钱包</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="公钥加密和加密货币"><a href="#公钥加密和加密货币" class="headerlink" title="公钥加密和加密货币"></a>公钥加密和加密货币</h3><h3 id="私钥和公钥"><a href="#私钥和公钥" class="headerlink" title="私钥和公钥"></a>私钥和公钥</h3><h3 id="私钥"><a href="#私钥" class="headerlink" title="私钥"></a>私钥</h3><h3 id="公钥"><a href="#公钥" class="headerlink" title="公钥"></a>公钥</h3><h3 id="椭圆曲线密码学解释"><a href="#椭圆曲线密码学解释" class="headerlink" title="椭圆曲线密码学解释"></a>椭圆曲线密码学解释</h3><h3 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h3><h2 id="比特币地址"><a href="#比特币地址" class="headerlink" title="比特币地址"></a>比特币地址</h2><h3 id="Base58和Base58Check编码"><a href="#Base58和Base58Check编码" class="headerlink" title="Base58和Base58Check编码"></a>Base58和Base58Check编码</h3><h3 id="密钥的格式"><a href="#密钥的格式" class="headerlink" title="密钥的格式"></a>密钥的格式</h3><h2 id="用Python实现密钥和比特币地址"><a href="#用Python实现密钥和比特币地址" class="headerlink" title="用Python实现密钥和比特币地址"></a>用Python实现密钥和比特币地址</h2><h2 id="比特币钱包"><a href="#比特币钱包" class="headerlink" title="比特币钱包"></a>比特币钱包</h2><h3 id="非确定性（随机）钱包"><a href="#非确定性（随机）钱包" class="headerlink" title="非确定性（随机）钱包"></a>非确定性（随机）钱包</h3><h3 id="确定性（种子）钱包"><a href="#确定性（种子）钱包" class="headerlink" title="确定性（种子）钱包"></a>确定性（种子）钱包</h3><h3 id="助记码词汇"><a href="#助记码词汇" class="headerlink" title="助记码词汇"></a>助记码词汇</h3><h3 id="分层确定性钱包"><a href="#分层确定性钱包" class="headerlink" title="分层确定性钱包"></a>分层确定性钱包</h3><p>这种方案的一个常见的方案是安装一个扩展的公共钥匙在服务电商公共程序的网络服务器上。网络服务器可以使用这个公共钥匙衍生方程去给每一笔交易（比如客户的购物车）创造一个新的比特币地址。但为了避免被偷，网络服务商不会有任何私钥。没有HD钱包的话，唯一的方法就是在不同的安全服务器上创造成千上万个比特币地址，之后就提前上传到电商服务器上。这种方法比较繁琐而且要求持续的维护来确保电商服务器不“用光”公共钥匙。<br>【思路】 如游戏里面无限兑换码</p>
+<h2 id="高级密钥和地址"><a href="#高级密钥和地址" class="headerlink" title="高级密钥和地址"></a>高级密钥和地址</h2>
       
     </div>
     
@@ -420,6 +421,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/31/K0x01-P0x002-C0x0002-O0x00001/" rel="prev" title="ZeroMQ">
+                ZeroMQ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -508,7 +513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -530,7 +535,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -563,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于本书"><span class="nav-number">2.1.</span> <span class="nav-text">关于本书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读对象"><span class="nav-number">2.2.</span> <span class="nav-text">阅读对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封面故事"><span class="nav-number">2.3.</span> <span class="nav-text">封面故事</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本书惯例"><span class="nav-number">2.4.</span> <span class="nav-text">本书惯例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例"><span class="nav-number">2.5.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用代码示例"><span class="nav-number">2.6.</span> <span class="nav-text">使用代码示例</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于本书"><span class="nav-number">2.1.</span> <span class="nav-text">关于本书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读对象"><span class="nav-number">2.2.</span> <span class="nav-text">阅读对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封面故事"><span class="nav-number">2.3.</span> <span class="nav-text">封面故事</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本书惯例"><span class="nav-number">2.4.</span> <span class="nav-text">本书惯例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例"><span class="nav-number">2.5.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用代码示例"><span class="nav-number">2.6.</span> <span class="nav-text">使用代码示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密钥、地址、钱包"><span class="nav-number">3.</span> <span class="nav-text">密钥、地址、钱包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公钥加密和加密货币"><span class="nav-number">3.1.1.</span> <span class="nav-text">公钥加密和加密货币</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#私钥和公钥"><span class="nav-number">3.1.2.</span> <span class="nav-text">私钥和公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#私钥"><span class="nav-number">3.1.3.</span> <span class="nav-text">私钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公钥"><span class="nav-number">3.1.4.</span> <span class="nav-text">公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#椭圆曲线密码学解释"><span class="nav-number">3.1.5.</span> <span class="nav-text">椭圆曲线密码学解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成公钥"><span class="nav-number">3.1.6.</span> <span class="nav-text">生成公钥</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币地址"><span class="nav-number">3.2.</span> <span class="nav-text">比特币地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Base58和Base58Check编码"><span class="nav-number">3.2.1.</span> <span class="nav-text">Base58和Base58Check编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#密钥的格式"><span class="nav-number">3.2.2.</span> <span class="nav-text">密钥的格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用Python实现密钥和比特币地址"><span class="nav-number">3.3.</span> <span class="nav-text">用Python实现密钥和比特币地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币钱包"><span class="nav-number">3.4.</span> <span class="nav-text">比特币钱包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非确定性（随机）钱包"><span class="nav-number">3.4.1.</span> <span class="nav-text">非确定性（随机）钱包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#确定性（种子）钱包"><span class="nav-number">3.4.2.</span> <span class="nav-text">确定性（种子）钱包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#助记码词汇"><span class="nav-number">3.4.3.</span> <span class="nav-text">助记码词汇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分层确定性钱包"><span class="nav-number">3.4.4.</span> <span class="nav-text">分层确定性钱包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级密钥和地址"><span class="nav-number">3.5.</span> <span class="nav-text">高级密钥和地址</span></a></li></ol></li></ol></div>
             
 
           </div>
