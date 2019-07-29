@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Draft Net</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-06-07T02:09:58.174Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>feelingWu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入理解Java虚拟机</title>
+    <link href="http://yoursite.com/2018/07/07/STUDY-COGNITION-DEDAO-demo02/"/>
+    <id>http://yoursite.com/2018/07/07/STUDY-COGNITION-DEDAO-demo02/</id>
+    <published>2018-07-07T12:22:09.000Z</published>
+    <updated>2019-06-07T02:09:58.174Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="为什么要于阅读此书？"><a href="#为什么要于阅读此书？" class="headerlink" title="为什么要于阅读此书？"></a>为什么要于阅读此书？</h2><blockquote><p>知己知彼百战不殆</p></blockquote><pre><code>理解虚拟机原理，对程序的性能、稳定性和可扩展性有较强的要求，帮助你写出最适合虚拟机的自优化的代码！</code></pre><a id="more"></a><h2 id="本书组成部分"><a href="#本书组成部分" class="headerlink" title="本书组成部分"></a>本书组成部分</h2><ul><li>走进Java</li><li>自动内存管理机制</li><li>虚拟机执行子系统</li><li>程序编译与代码优化</li><li>高效开发</li><li>代码清单(<a href="http://www.hzbook.com" target="_blank" rel="noopener">http://www.hzbook.com</a>)</li></ul><h3 id="Part1-走进Java"><a href="#Part1-走进Java" class="headerlink" title="Part1 走进Java"></a>Part1 走进Java</h3><blockquote><p>引导:1.Java技术体系的过去、现在和未来的一些发展趋势 2.如何编译一个OpenJDK7</p></blockquote><h4 id="Java技术体系"><a href="#Java技术体系" class="headerlink" title="Java技术体系"></a>Java技术体系</h4><pre><code>* 根据组成部分划分：JDK(Java Developing Kit),JRE(Java Runtime Environment)    ![Java技术体系](K0x01-P0x001-C0x0001-O0x00002/20180708181328.png)* 技术平台划分：Java Card(小程序),Java ME(移动终端),Java SE(桌面级),Java EE(企业级)</code></pre><h4 id="Java和虚拟机的发展历程"><a href="#Java和虚拟机的发展历程" class="headerlink" title="Java和虚拟机的发展历程"></a>Java和虚拟机的发展历程</h4><blockquote><p>大浪淘沙,留下英雄泪</p></blockquote><p>   <img src="/2018/07/07/STUDY-COGNITION-DEDAO-demo02/Java发展史.png" alt="Java发展史"></p><h4 id="编译自己的JDK-TODO"><a href="#编译自己的JDK-TODO" class="headerlink" title="编译自己的JDK(TODO)"></a>编译自己的JDK(<strong>TODO</strong>)</h4><h3 id="Part2-自动内存管理机制"><a href="#Part2-自动内存管理机制" class="headerlink" title="Part2 自动内存管理机制"></a>Part2 自动内存管理机制</h3><blockquote><p>引导: 1.内存如何划分 2.内存溢出异常如何导致及常见原因 3.分析垃圾回收算法 4.JDK1.7几款垃圾收集器的特点和运作原理 5.代码验证Java虚拟机中自动内存分配及回收的主要规则 6.6个命令行工具与两个可视化故障处理工具的使用方法 7.几个案例经验分享</p></blockquote><h4 id="Java内存区域与内存溢出异常"><a href="#Java内存区域与内存溢出异常" class="headerlink" title="Java内存区域与内存溢出异常"></a>Java内存区域与内存溢出异常</h4><h5 id="Java虚拟机内存的组成区域"><a href="#Java虚拟机内存的组成区域" class="headerlink" title="Java虚拟机内存的组成区域"></a>Java虚拟机内存的组成区域</h5><h6 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h6><ul><li><p><em>程序计数器</em></p></li><li><p><em>Java虚拟机栈</em></p></li><li><p><em>本地方法栈</em></p></li><li><p><em>Java堆</em></p></li><li><p><em>方法区</em></p></li><li><p><em>运行时常量池</em></p></li><li><p><em>直接内存</em></p></li></ul><h4 id="离阿基手机启与内存分配策略"><a href="#离阿基手机启与内存分配策略" class="headerlink" title="离阿基手机启与内存分配策略"></a>离阿基手机启与内存分配策略</h4><h4 id="虚拟机性能监控与故障处理工具"><a href="#虚拟机性能监控与故障处理工具" class="headerlink" title="虚拟机性能监控与故障处理工具"></a>虚拟机性能监控与故障处理工具</h4><h4 id="调优案例分析与实战"><a href="#调优案例分析与实战" class="headerlink" title="调优案例分析与实战"></a>调优案例分析与实战</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;为什么要于阅读此书？&quot;&gt;&lt;a href=&quot;#为什么要于阅读此书？&quot; class=&quot;headerlink&quot; title=&quot;为什么要于阅读此书？&quot;&gt;&lt;/a&gt;为什么要于阅读此书？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;知己知彼百战不殆&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;理解虚拟机原理，对程序的性能、稳定性和可扩展性有较强的要求，帮助你写出最适合虚拟机的自优化的代码！
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="K0x01" scheme="http://yoursite.com/categories/K0x01/"/>
+    
+    
+      <category term="STUDY" scheme="http://yoursite.com/tags/STUDY/"/>
+    
+      <category term="SKILL" scheme="http://yoursite.com/tags/SKILL/"/>
+    
+      <category term="SOFT" scheme="http://yoursite.com/tags/SOFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Book List</title>
+    <link href="http://yoursite.com/2018/07/07/STUDY-SKILL-SOFT-demo01/"/>
+    <id>http://yoursite.com/2018/07/07/STUDY-SKILL-SOFT-demo01/</id>
+    <published>2018-07-07T12:17:21.000Z</published>
+    <updated>2019-07-26T07:22:10.715Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="站在巨人的肩膀上"><a href="#站在巨人的肩膀上" class="headerlink" title="站在巨人的肩膀上"></a>站在巨人的肩膀上</h3><blockquote><p>我不知道在别人看来，我是什么样的人；但在我自己看来，我不过就象是一个在海滨玩耍的小孩，为不时发现比寻常更为光滑的一块卵石或比寻常更为美丽的一片贝壳而沾沾自喜，而对于展现在我面前的浩瀚的真理的海洋，却全然没有发现。如果说我比别人看得更远些,那是因为我站在了巨人的肩上。</p></blockquote><a id="more"></a> <h4 id="专业类"><a href="#专业类" class="headerlink" title="专业类"></a>专业类</h4><p>1.AAA<br>2.BBB<br>3.CCC<br>3.DDD</p><h4 id="生活类"><a href="#生活类" class="headerlink" title="生活类"></a>生活类</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;站在巨人的肩膀上&quot;&gt;&lt;a href=&quot;#站在巨人的肩膀上&quot; class=&quot;headerlink&quot; title=&quot;站在巨人的肩膀上&quot;&gt;&lt;/a&gt;站在巨人的肩膀上&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;我不知道在别人看来，我是什么样的人；但在我自己看来，我不过就象是一个在海滨玩耍的小孩，为不时发现比寻常更为光滑的一块卵石或比寻常更为美丽的一片贝壳而沾沾自喜，而对于展现在我面前的浩瀚的真理的海洋，却全然没有发现。如果说我比别人看得更远些,那是因为我站在了巨人的肩上。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="K0x01" scheme="http://yoursite.com/categories/K0x01/"/>
+    
+    
+      <category term="STUDY" scheme="http://yoursite.com/tags/STUDY/"/>
+    
+      <category term="SKILL" scheme="http://yoursite.com/tags/SKILL/"/>
+    
+      <category term="SOFT" scheme="http://yoursite.com/tags/SOFT/"/>
+    
+  </entry>
+  
+</feed>
