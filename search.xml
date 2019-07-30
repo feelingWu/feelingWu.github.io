@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[深入理解Java虚拟机]]></title>
+    <url>%2F2018%2F07%2F07%2FSTUDY-COGNITION-DEDAO-demo02%2F</url>
+    <content type="text"><![CDATA[为什么要于阅读此书？ 知己知彼百战不殆 理解虚拟机原理，对程序的性能、稳定性和可扩展性有较强的要求，帮助你写出最适合虚拟机的自优化的代码！ 本书组成部分 走进Java 自动内存管理机制 虚拟机执行子系统 程序编译与代码优化 高效开发 代码清单(http://www.hzbook.com) Part1 走进Java 引导:1.Java技术体系的过去、现在和未来的一些发展趋势 2.如何编译一个OpenJDK7 Java技术体系* 根据组成部分划分：JDK(Java Developing Kit),JRE(Java Runtime Environment) ![Java技术体系](K0x01-P0x001-C0x0001-O0x00002/20180708181328.png) * 技术平台划分：Java Card(小程序),Java ME(移动终端),Java SE(桌面级),Java EE(企业级) Java和虚拟机的发展历程 大浪淘沙,留下英雄泪 编译自己的JDK(TODO)Part2 自动内存管理机制 引导: 1.内存如何划分 2.内存溢出异常如何导致及常见原因 3.分析垃圾回收算法 4.JDK1.7几款垃圾收集器的特点和运作原理 5.代码验证Java虚拟机中自动内存分配及回收的主要规则 6.6个命令行工具与两个可视化故障处理工具的使用方法 7.几个案例经验分享 Java内存区域与内存溢出异常Java虚拟机内存的组成区域运行时数据区域 程序计数器 Java虚拟机栈 本地方法栈 Java堆 方法区 运行时常量池 直接内存 离阿基手机启与内存分配策略虚拟机性能监控与故障处理工具调优案例分析与实战]]></content>
+      <categories>
+        <category>K0x01</category>
+      </categories>
+      <tags>
+        <tag>STUDY</tag>
+        <tag>SKILL</tag>
+        <tag>SOFT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Book List]]></title>
+    <url>%2F2018%2F07%2F07%2FSTUDY-SKILL-SOFT-demo01%2F</url>
+    <content type="text"><![CDATA[站在巨人的肩膀上 我不知道在别人看来，我是什么样的人；但在我自己看来，我不过就象是一个在海滨玩耍的小孩，为不时发现比寻常更为光滑的一块卵石或比寻常更为美丽的一片贝壳而沾沾自喜，而对于展现在我面前的浩瀚的真理的海洋，却全然没有发现。如果说我比别人看得更远些,那是因为我站在了巨人的肩上。 专业类1.AAA2.BBB3.CCC3.DDD 生活类]]></content>
+      <categories>
+        <category>K0x01</category>
+      </categories>
+      <tags>
+        <tag>STUDY</tag>
+        <tag>SKILL</tag>
+        <tag>SOFT</tag>
+      </tags>
+  </entry>
+</search>
