@@ -536,7 +536,7 @@
   
     <div class="comments" id="comments">
       
-        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div onclick="showGitment()" id="gitment-display-button">评论</div>
         <div id="gitment-container" style="display:none"></div>
       
     </div>
@@ -676,35 +676,9 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">feelingWu</span>
-
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">585</span>
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
 <span id="sitetime"></span>
 <script language=javascript>
 	function siteTime(){
@@ -737,10 +711,11 @@
 		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
 		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
 		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		document.getElementById("sitetime").innerHTML=" Running:"+/*diffYears+" y "+*/diffDays+" d "+diffHours+" h "+diffMinutes+" m "+diffSeconds+" s";
+		document.getElementById("sitetime").innerHTML=""+/*diffYears+"y"+*/diffDays+"天"+diffHours+"时"+diffMinutes+"分"+diffSeconds+"秒";
 	}
 	siteTime();
 </script>
+</div>
 
 
 
