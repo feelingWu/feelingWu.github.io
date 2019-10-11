@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/feelingWu/CMN-CMD.html</loc>
+    <loc>http://yoursite.com/2019/10/11/docker/</loc>
+    
+    <lastmod>2019-10-11T09:20:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/feelingWu/Hexo%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html</loc>
     
     <lastmod>2019-07-26T08:18:07.233Z</lastmod>
     
