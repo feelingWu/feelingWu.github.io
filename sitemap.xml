@@ -2,42 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
+    <loc>http://tryto.top/friends/index.html</loc>
     
-    <lastmod>2019-10-12T07:50:42.026Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2019-10-12T07:50:15.648Z</lastmod>
+    <lastmod>2019-10-12T14:17:57.790Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/10/11/docker/</loc>
+    <loc>http://tryto.top/about/index.html</loc>
+    
+    <lastmod>2019-10-12T14:17:25.581Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tryto.top/tags/index.html</loc>
+    
+    <lastmod>2019-10-12T14:16:42.303Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tryto.top/categories/index.html</loc>
+    
+    <lastmod>2019-10-12T14:16:20.051Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tryto.top/2019/10/11/docker/</loc>
     
     <lastmod>2019-10-11T09:20:17.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/feelingWu/Hexo%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html</loc>
+    <loc>http://tryto.top/feelingWu/Hexo%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html</loc>
     
     <lastmod>2019-07-26T08:18:07.233Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/07/STUDY-SKILL-SOFT-demo01/</loc>
+    <loc>http://tryto.top/2018/07/07/study-skill-soft-demo01/</loc>
     
     <lastmod>2019-07-26T07:22:10.715Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/07/STUDY-COGNITION-DEDAO-demo02/</loc>
+    <loc>http://tryto.top/2018/07/07/study-cognition-dedao-demo02/</loc>
     
     <lastmod>2019-06-07T02:09:58.174Z</lastmod>
     
