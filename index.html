@@ -502,7 +502,77 @@ $(function () {
                     
 
                     
+                        
 
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'true' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'true' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"Beautiful World","artist":"Westlife","url":"http://music.163.com/song/media/outer/url?id=20707408.mp3","cover":"https://p2.music.126.net/MEWr-THANcYy-1jvx334_Q==/109951163167214019.jpg?param=130y130"},{"name":"River Flows in You","artist":"Yiruma","url":"http://music.163.com/song/media/outer/url?id=26237342.mp3","cover":"https://p2.music.126.net/8ZRSyI0ZN_4ah8uzsNd1mA==/2324367581169008.jpg?param=130y130"},{"name":"Hello My Love","artist":"Westlife","url":"http://music.163.com/song/media/outer/url?id=1338728670.mp3","cover":"https://p2.music.126.net/P2_COhPmlhsOpoj31DDLeA==/109951163785867445.jpg?param=130y130"},{"name":"If I Let You Go","artist":"Westlife","url":"http://music.163.com/song/media/outer/url?id=27220254.mp3","cover":"https://p2.music.126.net/TcOOoZSbISGT9AkhUtwOsg==/5644892697128237.jpg?param=130y130"},{"name":"Señorita","artist":"Shawn Mendes/Camila Cabello","url":"http://music.163.com/song/media/outer/url?id=1373168742.mp3","cover":"https://p2.music.126.net/eSrLKe5g3U8jX-lb629q6A==/109951164162885535.jpg?param=130y130"}]')
+    });
+});
+</script>
+                    
+
+                    
+                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;精彩视频
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                    ></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'false' === 'true',
+            theme: '#42b983',
+            loop: 'false' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: 'http://vd1.bdstatic.com/mda-hi2eieb0hv3n1u20/sc/mda-hi2eieb0hv3n1u20.mp4',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
                     
 
                     <div id="recommend-sections" class="recommend">
@@ -718,37 +788,79 @@ Docker简介什么是虚拟化​    在计算机中，虚拟化（英语：Virt
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            Copyright&copy; 2019
-
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
             <br>
-            <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
-            <br>
-
             
-
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">5k</span>&nbsp;字
             
-                    
-                        <span id="busuanzi_container_site_pv" style='display:none'></span>
-                        总访问量: <span id="busuanzi_value_site_pv" class="white-color"></span>
-                    
-
-                    
-                        <span id="busuanzi_container_site_uv" style='display:none'></span>
-                        人次&nbsp; | &nbsp;访客人数: <span id="busuanzi_value_site_uv" class="white-color"></span> 人
-                    
-
             
-
             
-                &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">5k</span> 字
             
-
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
             
             <br>
-
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
         </div>
-
         <div class="col s12 m4 l4 social-link social-statis">
 
 
@@ -769,49 +881,11 @@ Docker简介什么是虚拟化​    在计算机中，虚拟化（英语：Virt
     </a>
 
 </div>
-
     </div>
 </footer>
 
 <div class="progress-bar"></div>
 
-<script language=javascript>
-    function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-        year - 作为date对象的年份，为4位年份值
-        month - 0-11之间的整数，做为date对象的月份
-        day - 1-31之间的整数，做为date对象的天数
-        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-        minutes - 0-59之间的整数，做为date对象的分钟数
-        seconds - 0-59之间的整数，做为date对象的秒数
-        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2019, 08, 10, 00, 00, 00); //北京时间2019-8-1 00:00:00
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
-            minutes) / seconds);
-        document.getElementById("sitetime").innerHTML = "本站已勉强运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours +
-            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒" ;
-    } /*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
-    siteTime();
-</script>
 
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
