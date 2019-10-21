@@ -370,7 +370,7 @@ Docker简介什么是虚拟化​    在计算机中，虚拟化（英语：Virt
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('medias/cover/docker-1.jpeg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/cover/docker-1.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -619,7 +619,7 @@ Docker简介什么是虚拟化​    在计算机中，虚拟化（英语：Virt
 <pre><code>vi /etc/docker/daemon.json  
 </code></pre><p>在该文件中输入如下内容：</p>
 <pre><code>{
-&quot;registry-mirrors&quot;: [&quot;https://docker.mirrors.ustc.edu.cn&quot;]
+"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]
 }
 </code></pre><h2 id="Docker的启动与停止"><a href="#Docker的启动与停止" class="headerlink" title="Docker的启动与停止"></a>Docker的启动与停止</h2><p><strong>systemctl</strong>命令是系统服务管理器指令</p>
 <p>启动docker：</p>
@@ -698,7 +698,7 @@ Docker简介什么是虚拟化​    在计算机中，虚拟化（英语：Virt
 <h3 id="查看容器IP地址"><a href="#查看容器IP地址" class="headerlink" title="查看容器IP地址"></a>查看容器IP地址</h3><p>我们可以通过以下命令查看容器运行的各种数据</p>
 <pre><code>docker inspect 容器名称（容器ID） 
 </code></pre><p>也可以直接执行下面的命令直接输出IP地址</p>
-<pre><code>docker inspect --format=&#39;{{.NetworkSettings.IPAddress}}&#39; 容器名称（容器ID）
+<pre><code>docker inspect --format='{{.NetworkSettings.IPAddress}}' 容器名称（容器ID）
 </code></pre><h3 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h3><p>删除指定的容器：</p>
 <pre><code>docker rm 容器名称（容器ID）
 </code></pre><h1 id="应用部署"><a href="#应用部署" class="headerlink" title="应用部署"></a>应用部署</h1><h2 id="MySQL部署"><a href="#MySQL部署" class="headerlink" title="MySQL部署"></a>MySQL部署</h2><p>（1）拉取mysql镜像</p>
@@ -799,7 +799,7 @@ ENV JRE_HOME $JAVA_HOME/jre
 ENV CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
 ENV PATH $JAVA_HOME/bin:$PATH
 </code></pre><p>（4）执行命令构建镜像</p>
-<pre><code>docker build -t=&#39;jdk1.8&#39; .
+<pre><code>docker build -t='jdk1.8' .
 </code></pre><p>注意后边的空格和点，不要省略</p>
 <p>（5）查看镜像是否建立完成</p>
 <pre><code>docker images
@@ -807,7 +807,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 <pre><code>docker pull registry
 </code></pre><p>（2）启动私有仓库容器</p>
 <pre><code>docker run -di --name=registry -p 5000:5000 registry
-</code></pre><p>（3）打开浏览器 输入地址<a href="http://192.168.184.141:5000/v2/_catalog看到`{&quot;repositories&quot;:[]}`" target="_blank" rel="noopener">http://192.168.184.141:5000/v2/_catalog看到`{&quot;repositories&quot;:[]}`</a> 表示私有仓库搭建成功并且内容为空</p>
+</code></pre><p>（3）打开浏览器 输入地址<a href="http://192.168.184.141:5000/v2/_catalog看到`{&quot;repositories&quot;:[]}`" target="_blank" rel="noopener">http://192.168.184.141:5000/v2/_catalog看到`{"repositories":[]}`</a> 表示私有仓库搭建成功并且内容为空</p>
 <p>（4）修改daemon.json</p>
 <pre><code>vi /etc/docker/daemon.json
 </code></pre><p>添加以下内容，保存退出。</p>
@@ -822,7 +822,25 @@ ENV PATH $JAVA_HOME/bin:$PATH
 <pre><code>docker start registry
 </code></pre><p>（3）上传标记的镜像</p>
 <pre><code>docker push 192.168.184.141:5000/jdk1.8
-</code></pre>
+</code></pre><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1054,7 +1072,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
                 <a href="/2019/10/11/docker/">
                     <div class="card-image">
                         
-                        <img src="medias/cover/docker-1.jpeg" class="responsive-img" alt="Docker,轻量级的虚拟化技术">
+                        <img src="/medias/cover/docker-1.jpeg" class="responsive-img" alt="Docker,轻量级的虚拟化技术">
                         
                         <span class="card-title">Docker,轻量级的虚拟化技术</span>
                     </div>
@@ -1122,7 +1140,7 @@ Docker简介什么是虚拟化​    在计算机中，虚拟化（英语：Virt
                 <a href="/2019/10/11/docker/">
                     <div class="card-image">
                         
-                        <img src="medias/cover/docker-1.jpeg" class="responsive-img" alt="Docker,轻量级的虚拟化技术">
+                        <img src="/medias/cover/docker-1.jpeg" class="responsive-img" alt="Docker,轻量级的虚拟化技术">
                         
                         <span class="card-title">Docker,轻量级的虚拟化技术</span>
                     </div>

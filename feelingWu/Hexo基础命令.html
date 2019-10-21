@@ -503,7 +503,7 @@
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        161
+                        231
                     </div>
                     
 
@@ -534,9 +534,27 @@
 <h1 id="发表草稿"><a href="#发表草稿" class="headerlink" title="发表草稿"></a>发表草稿</h1><p>$ hexo publish [layout] <filename> </filename></p>
 <h1 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h1><p>$ hexo –draft</p>
 <h1 id="自定义-CWD（Current-working-directory）"><a href="#自定义-CWD（Current-working-directory）" class="headerlink" title="自定义 CWD（Current working directory）"></a>自定义 CWD（Current working directory）</h1><p>$ hexo –cwd /path/to/cwd</p>
-<p>hexo new [layout] <title><br>ex:<br>    hexo new study demo01</title></p>
-<p>draft–&gt;public<br>hexo publish [layout] <title><br>ex:<br>    hexo new draft demo01<br>    hexo publish study <title></title></title></p>
-
+<p>hexo new [layout] <title>&lt;br&gt;ex:&lt;br&gt;    hexo new study demo01</title></p>
+<p>draft–&gt;public<br>hexo publish [layout] <title>&lt;br&gt;ex:&lt;br&gt;    hexo new draft demo01&lt;br&gt;    hexo publish study &lt;title&gt;</title></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
