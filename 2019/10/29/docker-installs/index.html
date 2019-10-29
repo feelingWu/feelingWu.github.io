@@ -10,8 +10,9 @@ docker 安装软件工具
 
 准备工作docker准备工作传送门
 命令快捷
-查看镜像`docker images | grep ?
-启动容器docker run -id –name=matrix_mysql -p 13306:3306 -">
+查看镜像docker images | grep ?
+
+启动容器docker run -id --name=matrix_mysql -p 13306:3306 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -373,7 +374,7 @@ docker 安装软件工具
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/cover/')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/cover/docker-2')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -530,7 +531,7 @@ docker 安装软件工具
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        559
+                        557
                     </div>
                     
 
@@ -558,15 +559,19 @@ docker 安装软件工具
 </blockquote>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p><a href="http://tryto.top/2019/10/11/docker/">docker准备工作传送门</a></p>
 <h2 id="命令快捷"><a href="#命令快捷" class="headerlink" title="命令快捷"></a>命令快捷</h2><ul>
-<li>查看镜像<br><code>`</code><br>docker images | grep ?</li>
-<li>启动容器<br>docker run -id –name=matrix_mysql -p 13306:3306 -e MYSQL_ROOT_PASSWORD=abc123 mysql</li>
-<li>进入容器<br>docker exec -it 容器名/容器Id  /bin/bash<br><code>`</code><h2 id="安装Nexus3"><a href="#安装Nexus3" class="headerlink" title="安装Nexus3"></a>安装Nexus3</h2></li>
+<li>查看镜像<pre><code>docker images | grep ?
+</code></pre></li>
+<li>启动容器<pre><code>docker run -id --name=matrix_mysql -p 13306:3306 -e MYSQL_ROOT_PASSWORD=abc123 mysql
+</code></pre></li>
+<li>进入容器<pre><code>docker exec -it 容器名/容器Id  /bin/bash
+</code></pre><h2 id="安装Nexus3"><a href="#安装Nexus3" class="headerlink" title="安装Nexus3"></a>安装Nexus3</h2></li>
 </ul>
 <p>1.查询镜像</p>
 <pre><code>  docker search nexus
 </code></pre><p>2.拉取镜像</p>
 <pre><code>  docker pull sonatype/nexus3
-</code></pre><p>3.配置本地保存数据的路径<br>  路径可自定义,我放在/docker/nexus/nexus-data下。<br>  注意：在生成目录的时候，因为nexus的读写默认是200,docker run的时候会报找不到路径的错误<br>  <a href="https://www.cnblogs.com/badaoliumangqizhi/p/11565113.html" target="_blank" rel="noopener">可能遇到的问题:找不到路径解释</a><br>4.修改目录权限</p>
+</code></pre><p>3.配置本地保存数据的路径<br>  路径可自定义,我放在/docker/nexus/nexus-data下。<br>  注意：在生成目录的时候，因为nexus的读写默认是200,docker run的时候会报找不到路径的错误</p>
+<p><a href="https://www.cnblogs.com/badaoliumangqizhi/p/11565113.html" target="_blank" rel="noopener">可能遇到的问题:找不到路径错误</a><br>4.修改目录权限</p>
 <pre><code>chmod 777 docker
 chmod 777 nexus
 chmod 777 nexus-data
@@ -584,7 +589,7 @@ chmod 777 nexus-data
 <pre><code># docker exec -it matrix_nexus3 /bin/bash
 # cd nexus-data/
 # vi admin.password  ---复制出密码,去网页登录
-</code></pre><p>登录完成后,默认提示修改新密码,新密码改完后,admin.password将会消失,所以要保管好密码(132***42)</p>
+</code></pre><p>登录完成后,默认提示修改新密码,新密码改完后,admin.password将会消失,所以要保管好密码</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -835,7 +840,7 @@ chmod 777 nexus-data
                 <a href="/2019/10/29/docker-installs/">
                     <div class="card-image">
                         
-                        <img src="/cover/" class="responsive-img" alt="Docker Installs">
+                        <img src="/cover/docker-2" class="responsive-img" alt="Docker Installs">
                         
                         <span class="card-title">Docker Installs</span>
                     </div>
@@ -848,8 +853,9 @@ docker 安装软件工具
 
 准备工作docker准备工作传送门
 命令快捷
-查看镜像`docker images | grep ?
-启动容器docker run -id –name=matrix_mysql -p 13306:3306 -
+查看镜像docker images | grep ?
+
+启动容器docker run -id --name=matrix_mysql -p 13306:3306 
                         
                     </div>
                     <div class="publish-info">
@@ -898,7 +904,7 @@ docker 安装软件工具
                 <a href="/2019/10/29/linux-installs/">
                     <div class="card-image">
                         
-                        <img src="/cover/" class="responsive-img" alt="Linux Installs">
+                        <img src="/cover/linux-1.jpg" class="responsive-img" alt="Linux Installs">
                         
                         <span class="card-title">Linux Installs</span>
                     </div>
