@@ -8,11 +8,9 @@
     <meta name="description" content="
 Linux 软件工具安装
 
-安装Java通过yum方式安装Java1.查看JDK是否已安装
-# yum list installed | grep java
-2.若已经安装了JDK，如何卸载Java环境？
-
-卸载JDK相关文件：# yum">
+安装Java通过yum方式安装Java查看JDK是否已安装# yum list installed | grep java
+若已经安装了JDK，如何卸载Java环境？
+卸载JDK相关文件：# yum -y re">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -531,7 +529,7 @@ Linux 软件工具安装
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        704
+                        687
                     </div>
                     
 
@@ -557,70 +555,55 @@ Linux 软件工具安装
                 <blockquote>
 <p>Linux 软件工具安装<br><a id="more"></a></p>
 </blockquote>
-<h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><h3 id="通过yum方式安装Java"><a href="#通过yum方式安装Java" class="headerlink" title="通过yum方式安装Java"></a>通过yum方式安装Java</h3><p>1.查看JDK是否已安装</p>
-<pre><code># yum list installed | grep java
-</code></pre><p>2.若已经安装了JDK，如何卸载Java环境？</p>
-<ul>
+<h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><h3 id="通过yum方式安装Java"><a href="#通过yum方式安装Java" class="headerlink" title="通过yum方式安装Java"></a>通过yum方式安装Java</h3><h4 id="查看JDK是否已安装"><a href="#查看JDK是否已安装" class="headerlink" title="查看JDK是否已安装"></a>查看JDK是否已安装</h4><pre><code># yum list installed | grep java
+</code></pre><h4 id="若已经安装了JDK，如何卸载Java环境？"><a href="#若已经安装了JDK，如何卸载Java环境？" class="headerlink" title="若已经安装了JDK，如何卸载Java环境？"></a>若已经安装了JDK，如何卸载Java环境？</h4><ul>
 <li>卸载JDK相关文件：<pre><code># yum -y remove java-1.7.0-openjdk*
 </code></pre>卸载tzdata-java：<pre><code># yum -y remove tzdata-java.noarch
-</code></pre>注：“*”表示卸载掉java 1.7.0的所有openjdk相关文件<br>3.查看yum库中的Java安装包<pre><code># yum -y list java*
-</code></pre>4.安装Java安装包</li>
+</code></pre>注：“*”表示卸载掉java 1.7.0的所有openjdk相关文件<h4 id="查看yum库中的Java安装包"><a href="#查看yum库中的Java安装包" class="headerlink" title="查看yum库中的Java安装包"></a>查看yum库中的Java安装包</h4><pre><code># yum -y list java*
+</code></pre><h4 id="安装Java安装包"><a href="#安装Java安装包" class="headerlink" title="安装Java安装包"></a>安装Java安装包</h4></li>
 </ul>
 <p>以yum库中java-1.8.0为例：</p>
 <pre><code># yum -y install java-1.8.0-openjdk*
 </code></pre><p>注：“*”表示将java-1.8.0的所有相关Java程序都安装上</p>
-<p>5.查看刚刚安装版本</p>
-<pre><code># java -version
-</code></pre><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><p>1.修改配置文件</p>
+<h4 id="查看刚刚安装版本"><a href="#查看刚刚安装版本" class="headerlink" title="查看刚刚安装版本"></a>查看刚刚安装版本</h4><pre><code># java -version
+</code></pre><h4 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h4><p>1.修改配置文件</p>
 <pre><code># vim /etc/profile
 # export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 # export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 # export PATH=$PATH:$JAVA_HOME/bin
 </code></pre><p>2.生效修改</p>
 <pre><code># source /etc/profile
-</code></pre><h3 id="通过压缩包安装Java"><a href="#通过压缩包安装Java" class="headerlink" title="通过压缩包安装Java"></a>通过压缩包安装Java</h3><p>1.准备工作：</p>
+</code></pre><h3 id="通过压缩包安装Java"><a href="#通过压缩包安装Java" class="headerlink" title="通过压缩包安装Java"></a>通过压缩包安装Java</h3><p>####准备工作：</p>
 <ul>
 <li>jdk-8u11-linux-x64.tar.gz<br>下载地址：<a href="https://pan.baidu.com/s/1smNHABN" target="_blank" rel="noopener">https://pan.baidu.com/s/1smNHABN</a> (ps：也可在官网下载最新jdk:<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>)</li>
 <li>shell<br>在windows下载完成jdk后，通过shell发送到Linux上</li>
 </ul>
-<p>2.登录Linux，切换到root用户   </p>
-<pre><code># su root ---获取root用户权限，当前工作目录不变(需要root密码)
+<h4 id="登录Linux，切换到root用户"><a href="#登录Linux，切换到root用户" class="headerlink" title="登录Linux，切换到root用户"></a>登录Linux，切换到root用户</h4><pre><code># su root ---获取root用户权限，当前工作目录不变(需要root密码)
 </code></pre><p>或者</p>
 <pre><code># sudo -i ---不需要root密码直接切换成root（需要当前用户密码）
-</code></pre><p>3.在usr目录下建立Java安装目录</p>
-<pre><code># cd /usr/local/src/
+</code></pre><h4 id="在usr目录下建立Java安装目录"><a href="#在usr目录下建立Java安装目录" class="headerlink" title="在usr目录下建立Java安装目录"></a>在usr目录下建立Java安装目录</h4><pre><code># cd /usr/local/src/
 # mkdir java
-</code></pre><p>4.解压jdk到当前目录,得到文件夹 jdk1.8.0_11</p>
-<pre><code># tar -zxvf jdk-8u11-linux-x64.tar.gz
-</code></pre><p>5.解压完建立一个链接以节省目录长度</p>
-<pre><code># ln -s /usr/local/src/java/jdk1.8.0_11/ /usr/local/src/jdk
-</code></pre><p>6.编辑配置文件，配置环境变量</p>
-<pre><code># vim /etc/profile
+</code></pre><h4 id="解压jdk到当前目录-得到文件夹-jdk1-8-0-11"><a href="#解压jdk到当前目录-得到文件夹-jdk1-8-0-11" class="headerlink" title="解压jdk到当前目录,得到文件夹 jdk1.8.0_11"></a>解压jdk到当前目录,得到文件夹 jdk1.8.0_11</h4><pre><code># tar -zxvf jdk-8u11-linux-x64.tar.gz
+</code></pre><h4 id="解压完建立一个链接以节省目录长度"><a href="#解压完建立一个链接以节省目录长度" class="headerlink" title="解压完建立一个链接以节省目录长度"></a>解压完建立一个链接以节省目录长度</h4><pre><code># ln -s /usr/local/src/java/jdk1.8.0_11/ /usr/local/src/jdk
+</code></pre><h4 id="编辑配置文件，配置环境变量"><a href="#编辑配置文件，配置环境变量" class="headerlink" title="编辑配置文件，配置环境变量"></a>编辑配置文件，配置环境变量</h4><pre><code># vim /etc/profile
 </code></pre><p>在文末添加如下内容：</p>
 <pre><code># JAVA_HOME=/usr/local/src/jdk
 # CLASSPATH=$JAVA_HOME/lib/
 # PATH=$PATH:$JAVA_HOME/bin
 # export PATH JAVA_HOME CLASSPATH
-</code></pre><p>7.重启机器或执行命令</p>
-<pre><code># sudo shutdown -r now
-</code></pre><p>8.查看刚刚安装版本</p>
-<pre><code># java -version
-</code></pre><h2 id="安装Maven"><a href="#安装Maven" class="headerlink" title="安装Maven"></a>安装Maven</h2><h3 id="在线下载安装"><a href="#在线下载安装" class="headerlink" title="在线下载安装"></a>在线下载安装</h3><p>1、安装wget命令</p>
-<pre><code># yum -y install wget
-</code></pre><p>2、下载maven安装包</p>
-<pre><code># cd /usr/local/src/
+</code></pre><h4 id="重启机器或执行命令"><a href="#重启机器或执行命令" class="headerlink" title="重启机器或执行命令"></a>重启机器或执行命令</h4><pre><code># sudo shutdown -r now
+</code></pre><h4 id="查看刚刚安装版本-1"><a href="#查看刚刚安装版本-1" class="headerlink" title="查看刚刚安装版本"></a>查看刚刚安装版本</h4><pre><code># java -version
+</code></pre><h2 id="安装Maven"><a href="#安装Maven" class="headerlink" title="安装Maven"></a>安装Maven</h2><h3 id="在线下载安装"><a href="#在线下载安装" class="headerlink" title="在线下载安装"></a>在线下载安装</h3><h4 id="安装wget命令"><a href="#安装wget命令" class="headerlink" title="安装wget命令"></a>安装wget命令</h4><pre><code># yum -y install wget
+</code></pre><h4 id="下载maven安装包"><a href="#下载maven安装包" class="headerlink" title="下载maven安装包"></a>下载maven安装包</h4><pre><code># cd /usr/local/src/
 # wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
-</code></pre><p>3.解压maven安装包</p>
-<pre><code># tar -zxvf apache-maven-3.5.4-bin.tar.gz
-</code></pre><p>4.配置maven</p>
-<pre><code># vi /etc/profile
+</code></pre><h4 id="解压maven安装包"><a href="#解压maven安装包" class="headerlink" title="解压maven安装包"></a>解压maven安装包</h4><pre><code># tar -zxvf apache-maven-3.5.4-bin.tar.gz
+</code></pre><h4 id="配置maven"><a href="#配置maven" class="headerlink" title="配置maven"></a>配置maven</h4><pre><code># vi /etc/profile
 </code></pre><p>在配置文件配置</p>
 <pre><code># export MAVEN_HOME=/usr/local/src/apache-maven-3.5.4
 # export PATH=$MAVEN_HOME/bin:$PATH
 </code></pre><p>配置文件生效</p>
 <pre><code># source /etc/profile
-</code></pre><p>5.查看maven</p>
-<pre><code># mvn -version
+</code></pre><h4 id="查看maven"><a href="#查看maven" class="headerlink" title="查看maven"></a>查看maven</h4><pre><code># mvn -version
 </code></pre><h3 id="安装包安装"><a href="#安装包安装" class="headerlink" title="安装包安装"></a>安装包安装</h3><p><img src="/2019/10/29/linux-installs/404.jpg" alt=""></p>
 <p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Maven下载地址</a></p>
 <h2 id="安装Nexus3"><a href="#安装Nexus3" class="headerlink" title="安装Nexus3"></a>安装Nexus3</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
