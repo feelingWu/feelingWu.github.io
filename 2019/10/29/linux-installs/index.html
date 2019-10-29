@@ -4,13 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux installs, Earnest">
+    <meta name="keywords" content="Linux Installs, Earnest">
     <meta name="description" content="
 Linux 软件工具安装
 
-
-安装Java通过yum方式安装Java1.查看JDK是否已安装yum list installed | grep java
-2.若已经安装了JDK，如何卸载Java环境？卸载JDK相关文件：yum -y re">
+安装Java通过yum方式安装Java1.查看JDK是否已安装
+yum list installed | grep java
+2.若已经安装了JDK，如何卸载Java环境？
+卸载JDK相关文件：yum -y r">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +19,7 @@ Linux 软件工具安装
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux installs | Earnest</title>
+    <title>Linux Installs | Earnest</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/caihong32.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -378,7 +379,7 @@ Linux 软件工具安装
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Linux installs
+                        Linux Installs
                     </div>
                 </div>
             </div>
@@ -529,7 +530,7 @@ Linux 软件工具安装
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        699
+                        707
                     </div>
                     
 
@@ -553,42 +554,82 @@ Linux 软件工具安装
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>Linux 软件工具安装</p>
+<p>Linux 软件工具安装<br><a id="more"></a></p>
 </blockquote>
-<a id="more"></a>
-<h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><h3 id="通过yum方式安装Java"><a href="#通过yum方式安装Java" class="headerlink" title="通过yum方式安装Java"></a>通过yum方式安装Java</h3><p>1.查看JDK是否已安装<br>yum list installed | grep java</p>
-<p>2.若已经安装了JDK，如何卸载Java环境？<br>卸载JDK相关文件：yum -y remove java-1.7.0-openjdk*<br>卸载tzdata-java：yum -y remove tzdata-java.noarch</p>
-<p>注：“*”表示卸载掉java 1.7.0的所有openjdk相关文件</p>
-<p>3.查看yum库中的Java安装包<br>yum -y list java*</p>
-<p>4.安装Java安装包<br>以yum库中java-1.8.0为例：<br>yum -y install java-1.8.0-openjdk*</p>
-<p>注：“*”表示将java-1.8.0的所有相关Java程序都安装上</p>
-<p>5.查看刚刚安装版本<br>java -version</p>
-<h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><p>1.修改配置文件<br>vim /etc/profile<br>export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk<br>export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>export PATH=$PATH:$JAVA_HOME/bin</p>
-<p>2.生效修改<br>source /etc/profile</p>
-<h3 id="通过压缩包安装Java"><a href="#通过压缩包安装Java" class="headerlink" title="通过压缩包安装Java"></a>通过压缩包安装Java</h3><p>1.准备工作：<br>  jdk-8u11-linux-x64.tar.gz  下载地址：<a href="https://pan.baidu.com/s/1smNHABN" target="_blank" rel="noopener">https://pan.baidu.com/s/1smNHABN</a> (ps：也可在官网下载最新jdk:<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>)<br>  shell  (在windows下载完成jdk后，通过shell发送到Linux上)</p>
-<p>2.登录Linux，切换到root用户<br>  su root 获取root用户权限，当前工作目录不变(需要root密码)<br>　或者<br>　sudo -i 不需要root密码直接切换成root（需要当前用户密码）</p>
-<p>3.在usr目录下建立Java安装目录<br>  cd /usr/local/src/<br>　mkdir java</p>
-<p>4.解压jdk到当前目录,得到文件夹 jdk1.8.0_11<br>  tar -zxvf jdk-8u11-linux-x64.tar.gz</p>
-<p>5.解压完建立一个链接以节省目录长度<br>  ln -s /usr/local/src/java/jdk1.8.0_11/ /usr/local/src/jdk</p>
-<p>6.编辑配置文件，配置环境变量<br>vim /etc/profile<br>在文末添加如下内容：<br>JAVA_HOME=/usr/local/src/jdk<br>CLASSPATH=$JAVA_HOME/lib/<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME CLASSPATH</p>
-<p>7.重启机器或执行命令<br>  sudo shutdown -r now</p>
-<p>8.查看刚刚安装版本<br>java -version</p>
-<h2 id="安装Maven"><a href="#安装Maven" class="headerlink" title="安装Maven"></a>安装Maven</h2><h3 id="在线下载安装"><a href="#在线下载安装" class="headerlink" title="在线下载安装"></a>在线下载安装</h3><p>1、安装wget命令<br> yum -y install wget</p>
-<p>2、下载maven安装包<br> cd /usr/local/src/<br> wget <a href="http://mirrors.cnnic.cn/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz" target="_blank" rel="noopener">http://mirrors.cnnic.cn/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz</a></p>
-<p>3.解压maven安装包<br> tar -zxvf apache-maven-3.5.4-bin.tar.gz</p>
-<p>4.配置maven<br> vi /etc/profile</p>
-<p>在配置文件配置<br> export MAVEN_HOME=/usr/local/src/apache-maven-3.5.4<br> export PATH=$MAVEN_HOME/bin:$PATH<br>配置文件生效<br> source /etc/profile</p>
-<p>5.查看maven<br> mvn -version</p>
-<h3 id="安装包安装"><a href="#安装包安装" class="headerlink" title="安装包安装"></a>安装包安装</h3><p><img src="/2019/10/29/linux-installs/Linux-installs/404.jpg" alt="TODO"></p>
+<h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><h3 id="通过yum方式安装Java"><a href="#通过yum方式安装Java" class="headerlink" title="通过yum方式安装Java"></a>通过yum方式安装Java</h3><p>1.查看JDK是否已安装</p>
+<pre><code>yum list installed | grep java
+</code></pre><p>2.若已经安装了JDK，如何卸载Java环境？</p>
+<pre><code>卸载JDK相关文件：yum -y remove java-1.7.0-openjdk*
+卸载tzdata-java：yum -y remove tzdata-java.noarch
+
+注：“*”表示卸载掉java 1.7.0的所有openjdk相关文件
+</code></pre><p>3.查看yum库中的Java安装包</p>
+<pre><code>yum -y list java*
+</code></pre><p>4.安装Java安装包</p>
+<pre><code>以yum库中java-1.8.0为例：
+yum -y install java-1.8.0-openjdk*
+
+注：“*”表示将java-1.8.0的所有相关Java程序都安装上
+</code></pre><p>5.查看刚刚安装版本</p>
+<pre><code>java -version
+</code></pre><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><p>1.修改配置文件</p>
+<pre><code>vim /etc/profile
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
+</code></pre><p>2.生效修改</p>
+<pre><code>source /etc/profile
+</code></pre><h3 id="通过压缩包安装Java"><a href="#通过压缩包安装Java" class="headerlink" title="通过压缩包安装Java"></a>通过压缩包安装Java</h3><p>1.准备工作：</p>
+<pre><code>  jdk-8u11-linux-x64.tar.gz  下载地址：https://pan.baidu.com/s/1smNHABN (ps：也可在官网下载最新jdk:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+  shell  (在windows下载完成jdk后，通过shell发送到Linux上)
+</code></pre><p>2.登录Linux，切换到root用户   </p>
+<pre><code>  su root 获取root用户权限，当前工作目录不变(需要root密码)
+　或者
+　sudo -i 不需要root密码直接切换成root（需要当前用户密码）
+</code></pre><p>3.在usr目录下建立Java安装目录</p>
+<pre><code>  cd /usr/local/src/
+　mkdir java
+</code></pre><p>4.解压jdk到当前目录,得到文件夹 jdk1.8.0_11</p>
+<pre><code>  tar -zxvf jdk-8u11-linux-x64.tar.gz
+</code></pre><p>5.解压完建立一个链接以节省目录长度</p>
+<pre><code>  ln -s /usr/local/src/java/jdk1.8.0_11/ /usr/local/src/jdk
+</code></pre><p>6.编辑配置文件，配置环境变量</p>
+<pre><code>vim /etc/profile
+在文末添加如下内容：
+JAVA_HOME=/usr/local/src/jdk
+CLASSPATH=$JAVA_HOME/lib/
+PATH=$PATH:$JAVA_HOME/bin
+export PATH JAVA_HOME CLASSPATH
+</code></pre><p>7.重启机器或执行命令</p>
+<pre><code>  sudo shutdown -r now
+</code></pre><p>8.查看刚刚安装版本</p>
+<pre><code>java -version
+</code></pre><h2 id="安装Maven"><a href="#安装Maven" class="headerlink" title="安装Maven"></a>安装Maven</h2><h3 id="在线下载安装"><a href="#在线下载安装" class="headerlink" title="在线下载安装"></a>在线下载安装</h3><p>1、安装wget命令</p>
+<pre><code> yum -y install wget
+</code></pre><p>2、下载maven安装包</p>
+<pre><code> cd /usr/local/src/
+ wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+</code></pre><p>3.解压maven安装包</p>
+<pre><code> tar -zxvf apache-maven-3.5.4-bin.tar.gz
+</code></pre><p>4.配置maven</p>
+<pre><code> vi /etc/profile
+</code></pre><p>在配置文件配置</p>
+<pre><code> export MAVEN_HOME=/usr/local/src/apache-maven-3.5.4
+ export PATH=$MAVEN_HOME/bin:$PATH
+配置文件生效
+ source /etc/profile
+</code></pre><p>5.查看maven</p>
+<pre><code> mvn -version
+</code></pre><h3 id="安装包安装"><a href="#安装包安装" class="headerlink" title="安装包安装"></a>安装包安装</h3><p><img src="/2019/10/29/linux-installs/Linux-Installs/404.jpg" alt="TODO"></p>
 <p><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">Maven下载地址</a></p>
 <h2 id="安装Nexus-version3"><a href="#安装Nexus-version3" class="headerlink" title="安装Nexus(version3)"></a>安装Nexus(version3)</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
 <li>安装Java</li>
 <li>安装Maven</li>
 </ul>
 <h3 id="在线下载安装-1"><a href="#在线下载安装-1" class="headerlink" title="在线下载安装"></a>在线下载安装</h3><p><a href="https://my.oschina.net/u/2963821/blog/1806035" target="_blank" rel="noopener">在线下载安装传送门</a></p>
-<h3 id="安装包安装-1"><a href="#安装包安装-1" class="headerlink" title="安装包安装"></a>安装包安装</h3><p><img src="/2019/10/29/linux-installs/Linux-installs/404.jpg" alt="TODO"></p>
+<h3 id="安装包安装-1"><a href="#安装包安装-1" class="headerlink" title="安装包安装"></a>安装包安装</h3><p><img src="/2019/10/29/linux-installs/Linux-Installs/404.jpg" alt="TODO"></p>
 <p><a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="noopener">Nexus下载地址1</a><br><a href="https://help.sonatype.com/repomanager3/download/download-archives---repository-manager-3" target="_blank" rel="noopener">Nexus下载地址2</a></p>
-<h3 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h3><p>源码下载不动,无耐想到此法,推荐 <a href="">Docker安装传送门</a></p>
+<h3 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h3><p>源码下载不动,无耐想到此法,推荐 <a href="http://tryto.top/2019/10/29/docker-installs/">Docker安装传送门</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -768,7 +809,7 @@ Linux 软件工具安装
             </div>
             <br/>
             <a  href="/2019/10/29/linux-installs/">
-                《Linux installs》
+                《Linux Installs》
             </a> 由
             <a href="http://tryto.top">
                 feelingWu
@@ -849,10 +890,9 @@ Linux 软件工具安装
                             
 docker 安装软件工具
 
-
 准备工作docker准备工作传送门
 命令快捷
-查看镜像docker images | grep ?
+查看镜像`docker images | grep ?
 启动容器docker run -id –name=matrix_mysql -p 13306:3306 -
                         
                     </div>
@@ -1066,7 +1106,7 @@ docker 安装软件工具
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.3k</span>&nbsp;字
+                class="white-color">7.4k</span>&nbsp;字
             
             
             

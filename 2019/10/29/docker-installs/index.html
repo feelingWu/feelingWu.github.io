@@ -8,10 +8,9 @@
     <meta name="description" content="
 docker 安装软件工具
 
-
 准备工作docker准备工作传送门
 命令快捷
-查看镜像docker images | grep ?
+查看镜像`docker images | grep ?
 启动容器docker run -id –name=matrix_mysql -p 13306:3306 -">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -531,7 +530,7 @@ docker 安装软件工具
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        533
+                        559
                     </div>
                     
 
@@ -555,24 +554,32 @@ docker 安装软件工具
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>docker 安装软件工具</p>
+<p>docker 安装软件工具<br><a id="more"></a></p>
 </blockquote>
-<a id="more"></a>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p><a href="http://tryto.top/2019/10/11/docker/">docker准备工作传送门</a></p>
 <h2 id="命令快捷"><a href="#命令快捷" class="headerlink" title="命令快捷"></a>命令快捷</h2><ul>
-<li>查看镜像<br>docker images | grep ?</li>
+<li>查看镜像<br><code>`</code><br>docker images | grep ?</li>
 <li>启动容器<br>docker run -id –name=matrix_mysql -p 13306:3306 -e MYSQL_ROOT_PASSWORD=abc123 mysql</li>
-<li>进入容器<br>docker exec -it 容器名/容器Id  /bin/bash</li>
+<li>进入容器<br>docker exec -it 容器名/容器Id  /bin/bash<br><code>`</code><h2 id="安装Nexus3"><a href="#安装Nexus3" class="headerlink" title="安装Nexus3"></a>安装Nexus3</h2></li>
 </ul>
-<h2 id="安装Nexus3"><a href="#安装Nexus3" class="headerlink" title="安装Nexus3"></a>安装Nexus3</h2><p>1.查询镜像<br>  docker search nexus<br>2.拉取镜像<br>  docker pull sonatype/nexus3<br>3.配置本地保存数据的路径<br>  路径可自定义,我放在/docker/nexus/nexus-data下。<br>  注意：在生成目录的时候，因为nexus的读写默认是200,docker run的时候会报找不到路径的错误<br>  <img src="https://www.cnblogs.com/badaoliumangqizhi/p/11565113.html" alt="找不到路径解释"><br>4.修改目录权限<br>chmod 777 docker<br>chmod 777 nexus<br>chmod 777 nexus-data<br>5.运行镜像<br>docker run -d -p 8081:8081 -p 8082:8082 -p 8083:8083 –name matrix_nexus3 -v /usr/etc/docker/nexus/nexus-data:/nexus-data sonatype/nexus3</p>
-<p>8081：客户端页面的对外端口<br>8082：准备建立docker hosted 私有库使用。hosted可以上传下载我建立的images。<br>8083：准备建立docker proxy 代理库使用。 proxy可以镜像远程公共仓库，比如：docke官方仓库、aliyun等等。</p>
+<p>1.查询镜像</p>
+<pre><code>  docker search nexus
+</code></pre><p>2.拉取镜像</p>
+<pre><code>  docker pull sonatype/nexus3
+</code></pre><p>3.配置本地保存数据的路径<br>  路径可自定义,我放在/docker/nexus/nexus-data下。<br>  注意：在生成目录的时候，因为nexus的读写默认是200,docker run的时候会报找不到路径的错误<br>  <a href="https://www.cnblogs.com/badaoliumangqizhi/p/11565113.html" target="_blank" rel="noopener">可能遇到的问题:找不到路径解释</a><br>4.修改目录权限</p>
+<pre><code>chmod 777 docker
+chmod 777 nexus
+chmod 777 nexus-data
+</code></pre><p>5.运行镜像</p>
+<pre><code>docker run -d -p 8081:8081 -p 8082:8082 -p 8083:8083 --name matrix_nexus3 -v /usr/etc/docker/nexus/nexus-data:/nexus-data sonatype/nexus3
+</code></pre><p>8081：客户端页面的对外端口<br>8082：准备建立docker hosted 私有库使用。hosted可以上传下载我建立的images。<br>8083：准备建立docker proxy 代理库使用。 proxy可以镜像远程公共仓库，比如：docke官方仓库、aliyun等等。</p>
 <p>如果我们在/etc/docker/daemon.json这个文件夹中配置：</p>
 <p>daemon.json文件中的配置说明：</p>
 <pre><code>{
     "registry-mirrors": ["https://1v50e4uy.mirror.aliyuncs.com"],    ----文件加速地址，下载国外的镜像，通过它进行加速
     "insecure-registries":["192.168.111.112:8083"]      ---配置本地的镜像库地址,每次拖取镜像,如果8083上没有，先从远程库下载，下载到8083，再下载到本地库，下次再下载的时候，就从8083上下载了。 
 }
-</code></pre><p>6.容器正常运行，我们可以登陆页面，查看<br><img src="http://192.168.111.112:8081/" alt="http://192.168.111.112:8081/"></p>
+</code></pre><p>6.容器正常运行，我们可以登陆页面，查看<br><a href="http://192.168.111.112:8081/" target="_blank" rel="noopener">http://192.168.111.112:8081/</a></p>
 <p>7.登录 Nexus3 默认用户名:admin  默认密码不再是admin123,所以需要去容器内查看<br>查看默认密码：进入容器内查看</p>
 <pre><code># docker exec -it matrix_nexus3 /bin/bash
 # cd nexus-data/
@@ -839,10 +846,9 @@ docker 安装软件工具
                             
 docker 安装软件工具
 
-
 准备工作docker准备工作传送门
 命令快捷
-查看镜像docker images | grep ?
+查看镜像`docker images | grep ?
 启动容器docker run -id –name=matrix_mysql -p 13306:3306 -
                         
                     </div>
@@ -892,9 +898,9 @@ docker 安装软件工具
                 <a href="/2019/10/29/linux-installs/">
                     <div class="card-image">
                         
-                        <img src="/cover/" class="responsive-img" alt="Linux installs">
+                        <img src="/cover/" class="responsive-img" alt="Linux Installs">
                         
-                        <span class="card-title">Linux installs</span>
+                        <span class="card-title">Linux Installs</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -903,9 +909,10 @@ docker 安装软件工具
                             
 Linux 软件工具安装
 
-
-安装Java通过yum方式安装Java1.查看JDK是否已安装yum list installed | grep java
-2.若已经安装了JDK，如何卸载Java环境？卸载JDK相关文件：yum -y re
+安装Java通过yum方式安装Java1.查看JDK是否已安装
+yum list installed | grep java
+2.若已经安装了JDK，如何卸载Java环境？
+卸载JDK相关文件：yum -y r
                         
                     </div>
                     <div class="publish-info">
@@ -1059,7 +1066,7 @@ Linux 软件工具安装
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.3k</span>&nbsp;字
+                class="white-color">7.4k</span>&nbsp;字
             
             
             
