@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Earnest</title>
+  <title>未可</title>
   
-  <subtitle>知其然知其所以然</subtitle>
+  <subtitle>流年笑掷,未来可期</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tryto.top/"/>
@@ -10,7 +10,7 @@
   <id>http://tryto.top/</id>
   
   <author>
-    <name>feelingWu</name>
+    <name>571</name>
     
   </author>
   
@@ -60,9 +60,9 @@
     
       <category term="Study" scheme="http://tryto.top/tags/Study/"/>
     
-      <category term="Ops" scheme="http://tryto.top/tags/Ops/"/>
-    
       <category term="Linux" scheme="http://tryto.top/tags/Linux/"/>
+    
+      <category term="Ops" scheme="http://tryto.top/tags/Ops/"/>
     
   </entry>
   
