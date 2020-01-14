@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>未可</title>
+  <title>Colorful</title>
   
-  <subtitle>流年笑掷,未来可期</subtitle>
+  <subtitle>流年笑掷 未来可期</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tryto.top/"/>
@@ -60,9 +60,9 @@
     
       <category term="Study" scheme="http://tryto.top/tags/Study/"/>
     
-      <category term="Linux" scheme="http://tryto.top/tags/Linux/"/>
-    
       <category term="Ops" scheme="http://tryto.top/tags/Ops/"/>
+    
+      <category term="Linux" scheme="http://tryto.top/tags/Linux/"/>
     
   </entry>
   
