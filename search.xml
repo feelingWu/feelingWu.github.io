@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[流年笑掷,未来可期]]></title>
+    <url>%2F2020%2F05%2F14%2Fliu-nian-xiao-zhi-wei-lai-ke-qi%2F</url>
+    <content type="text"><![CDATA[2020 写在前面 毕业至今,已5年有余,一直想对自己的工作学习生活有个落地的总结,深知自己是一个思想的巨人,行动的矮子,大道理知道很多,却依然过不好这一生。 回首毕业这几年,就拿编程来说,似乎没有什么技术上的沉淀和质的飞跃,每天重复着撸着相同却没有新意的代码,以最熟悉的方式撸着,有些时候深思一个 原理,分析一段稍微花哨点的代码,却似懂非懂,知道有那么一回事,却说不清道不明,其实也就是所谓的不懂。虽说混迹于互联网金融圈内,每天和钱打交道, 从彩票到区块链数字货币, 庆幸至今从自己手里写的代码还没有发生给客户造成损失的同时,却总是有些惴惴不安,似乎有一场最终的审判在哪天便如期而至, 每每听到有同事因为误操作,代码不严谨或者一些莫名其妙的问题导致给公司和客户造成了损失,隐射到自己身上却细思极恐。 知道写总结的好处,也曾尝试着通过各种方式写过几次,写得少,拎不清重点的写,抄书式的写,最终浪费了大量的时间的同时,收效也少的可怜,最终从内心给自己的 负面暗示是还不如自己去百度、google、或者收集一大堆书签以备不时之需,事实却永远用不上,或者用的时候找不到,脱离了它们更是一无所知,也就是我知道有那么回事, 也曾经解决过,但是现在我说不清楚,给我几分钟,我去找找的被动状态。因为没有将这些信息内化成自己的知识,也只是解决了当时的问题,却没有熟练运用。 这样的行为,生活随处可见,无限的死循环：打游戏、熬夜、不运动、懒惰、受刺激打一波鸡血... 2020.1.5,我的小女儿Vicky降生了,也顺理成章的多个一个爸爸的角色,瞬间有种很强烈的责任压在自己的肩上,不想因为自己的人性弱点,而给她树立一个 不合格的榜样,育人先正己,所以2020年开始,做个合格的技术人,丈夫,儿子和爸爸。 流年笑掷，把握当下，未来可期。 博客导图 BLOG MAP document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>FEELING</category>
+      </categories>
+      <tags>
+        <tag>feeling</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Docker Installs]]></title>
     <url>%2F2019%2F10%2F29%2Fdocker-installs%2F</url>
     <content type="text"><![CDATA[docker 安装软件工具 准备工作docker准备工作传送门 命令快捷 查看镜像# docker images | grep ? 启动容器# docker run -id --name=matrix_mysql -p 13306:3306 -e MYSQL_ROOT_PASSWORD=abc123 mysql 进入容器# docker exec -it 容器名/容器Id /bin/bash 安装Nexus3查询镜像# docker search nexus 拉取镜像# docker pull sonatype/nexus3 配置本地保存数据的路径 路径可自定义,我放在/docker/nexus/nexus-data下。 注意：在生成目录的时候，因为nexus的读写默认是200,docker run的时候会报找不到路径的错误 可能遇到的问题:找不到路径错误 修改目录权限# chmod 777 docker # chmod 777 nexus # chmod 777 nexus-data 运行镜像# docker run -d -p 8081:8081 -p 8082:8082 -p 8083:8083 --name matrix_nexus3 -v /usr/etc/docker/nexus/nexus-data:/nexus-data sonatype/nexus3 8082 客户端页面的对外端口; 8082 准备建立docker hosted 私有库使用。hosted可以上传下载我建立的images; 8083 准备建立docker proxy 代理库使用。 proxy可以镜像远程公共仓库，比如：docke官方仓库、aliyun等等; daemon.json 在/etc/docker/daemon.json这个文件夹中配置; daemon.json文件中的配置说明： { "registry-mirrors": ["https://1v50e4uy.mirror.aliyuncs.com"], ----文件加速地址，下载国外的镜像，通过它进行加速 "insecure-registries":["192.168.111.112:8083"] ---配置本地的镜像库地址,每次拖取镜像,如果8083上没有，先从远程库下载，下载到8083，再下载到本地库，下次再下载的时候，就从8083上下载了。 } 登录 Nexus31.登录链接：http://192.168.111.112:8081/ 2.默认用户名:admin 默认密码不再是admin123,所以需要去容器内查看 3.查看默认密码：进入容器内查看 # docker exec -it matrix_nexus3 /bin/bash # cd nexus-data/ # vi admin.password ---复制出密码,去网页登录 4.登录完成后,默认提示修改新密码,新密码改完后,admin.password将会消失,所以要保管好密码 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>

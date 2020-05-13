@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tryto.top/"/>
-  <updated>2019-10-29T06:54:34.000Z</updated>
+  <updated>2020-05-13T16:04:51.000Z</updated>
   <id>http://tryto.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>流年笑掷,未来可期</title>
+    <link href="http://tryto.top/2020/05/14/liu-nian-xiao-zhi-wei-lai-ke-qi/"/>
+    <id>http://tryto.top/2020/05/14/liu-nian-xiao-zhi-wei-lai-ke-qi/</id>
+    <published>2020-05-13T16:04:51.000Z</published>
+    <updated>2020-05-13T16:04:51.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;2020-写在前面&quot;&gt;&lt;a href=&quot;#2020-写在前面&quot; class=&quot;headerlink&quot; title=&quot;2020 写在前面&quot;&gt;&lt;/a&gt;2020 写在前面&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;   
+        
+      
+    
+    </summary>
+    
+      <category term="FEELING" scheme="http://tryto.top/categories/FEELING/"/>
+    
+    
+      <category term="feeling" scheme="http://tryto.top/tags/feeling/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker Installs</title>
