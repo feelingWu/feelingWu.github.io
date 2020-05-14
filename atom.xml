@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tryto.top/"/>
-  <updated>2020-05-13T16:04:51.000Z</updated>
+  <updated>2020-05-14T14:41:25.000Z</updated>
   <id>http://tryto.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo操作手册</title>
+    <link href="http://tryto.top/2020/05/14/hexo-cao-zuo-shou-ce/"/>
+    <id>http://tryto.top/2020/05/14/hexo-cao-zuo-shou-ce/</id>
+    <published>2020-05-14T14:41:25.000Z</published>
+    <updated>2020-05-14T14:41:25.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;快速上手搭建属于自己的博客&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="INNER" scheme="http://tryto.top/categories/INNER/"/>
+    
+    
+      <category term="inner" scheme="http://tryto.top/tags/inner/"/>
+    
+      <category term="手册" scheme="http://tryto.top/tags/%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>流年笑掷,未来可期</title>
