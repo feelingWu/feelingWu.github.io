@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tryto.top/"/>
-  <updated>2020-05-14T15:05:23.524Z</updated>
+  <updated>2020-05-15T03:53:06.000Z</updated>
   <id>http://tryto.top/</id>
   
   <author>
@@ -17,16 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>博客脑图</title>
-    <link href="http://tryto.top/2020/05/14/bo-ke-nao-tu/"/>
-    <id>http://tryto.top/2020/05/14/bo-ke-nao-tu/</id>
+    <title>UML手册</title>
+    <link href="http://tryto.top/2020/05/15/uml-shou-ce/"/>
+    <id>http://tryto.top/2020/05/15/uml-shou-ce/</id>
+    <published>2020-05-15T03:53:06.000Z</published>
+    <updated>2020-05-15T03:53:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+      <category term="INNER" scheme="http://tryto.top/categories/INNER/"/>
+    
+    
+      <category term="inner" scheme="http://tryto.top/tags/inner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客导图</title>
+    <link href="http://tryto.top/2020/05/14/bo-ke-dao-tu/"/>
+    <id>http://tryto.top/2020/05/14/bo-ke-dao-tu/</id>
     <published>2020-05-14T14:58:50.000Z</published>
-    <updated>2020-05-14T15:05:23.524Z</updated>
+    <updated>2020-05-15T08:04:47.348Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;博客脑图&lt;/p&gt;
+&lt;p&gt;博客导图&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -62,7 +92,7 @@
     
       <category term="手册" scheme="http://tryto.top/tags/%E6%89%8B%E5%86%8C/"/>
     
-      <category term="hexo" scheme="http://tryto.top/tags/hexo/"/>
+      <category term="技术手册" scheme="http://tryto.top/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
