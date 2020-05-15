@@ -29,11 +29,7 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;h3 id=&quot;UML&quot;&gt;&lt;a href=&quot;#UML&quot; class=&quot;headerlink&quot; title=&quot;UML&quot;&gt;&lt;/a&gt;UML&lt;/h3&gt;&lt;h6 id=&quot;一、明确和理解问题&quot;&gt;&lt;a href=&quot;#一、明确和理解问题&quot; class=&quot;headerlink&quot;
         
       
     

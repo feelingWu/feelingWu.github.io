@@ -5,10 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="UML手册, Colorful">
-    <meta name="description" content="
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return">
+    <meta name="description" content="UML一、明确和理解问题问题本质是什么：不理解建模语言，看不懂建模图，知识盲区
+1.找出对方关心的问题点    看懂并会画建模图2.明确解决问题的目标    看懂、会画、长久记忆3.明确可以用来解决这个问题的资源百度搜索    参考博文：h">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -519,14 +517,14 @@
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        52
+                        1.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        4 分
                     </div>
                     
                 
@@ -542,7 +540,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h3 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h3><h6 id="一、明确和理解问题"><a href="#一、明确和理解问题" class="headerlink" title="一、明确和理解问题"></a>一、明确和理解问题</h6><p><strong>问题本质是什么</strong>：<br>不理解建模语言，看不懂建模图，知识盲区</p>
+<p><strong>1.找出对方关心的问题点</strong><br>    看懂并会画建模图<br><strong>2.明确解决问题的目标</strong><br>    看懂、会画、长久记忆<br><strong>3.明确可以用来解决这个问题的资源</strong><br>百度搜索<br>    参考博文：<br><a href="https://blog.csdn.net/suxinpingtao51/article/details/8011335" target="_blank" rel="noopener">https://blog.csdn.net/suxinpingtao51/article/details/8011335</a></p>
+<h6 id="二、拆分和定位问题"><a href="#二、拆分和定位问题" class="headerlink" title="二、拆分和定位问题"></a>二、拆分和定位问题</h6><p><strong>原问题</strong><br>什么是UML？<br>UML有几种类图？<br>类图分别是什么<br>有什么区别？<br>引用于哪些场景？</p>
+<p><strong>公式思维</strong></p>
+<p>UML（常见） = 泛化（继承） + 实现 + 组合 + 聚合 + 关联 + 依赖</p>
+<p><strong>推理模式(假设驱动/构建问题树)</strong></p>
+<p><strong>MECE法则</strong></p>
+<p><strong>横纵对比看数据</strong><br><img src="/2020/05/15/uml-shou-ce/UML手册/总图.gif" alt=""></p>
+<h6 id="三、提出解决方案"><a href="#三、提出解决方案" class="headerlink" title="三、提出解决方案"></a>三、提出解决方案</h6><ul>
+<li>什么是UML？</li>
+</ul>
+<p>统一建模语言(Unified Modeling Language，UML)是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言，是非专利的第三代建模和规约语言。UML使用面向对象设计的的建模工具，但独立于任何具体程序设计语言。</p>
+<ul>
+<li>UML有几种类图？</li>
+</ul>
+<p>常见的有以下几种关系: 泛化（Generalization）,  实现（Realization）, 关联（Association), 聚合（Aggregation）, 组合(Composition), 依赖(Dependency)</p>
+<ul>
+<li>类图分别是什么，有什么区别？</li>
+</ul>
+<hr>
+<p><strong>泛化（Generalization）</strong><br>【泛化关系】：是一种<strong>继承</strong>关系, 表示一般与特殊的关系, 它指定了子类如何特化父类的所有特征和行为. 例如：老虎是动物的一种, 即有老虎的特性也有动物的共性.<br>【箭头指向】：带<strong>三角箭头的实线</strong>，箭头<strong>指向父类</strong></p>
+<p><img src="/2020/05/15/uml-shou-ce/UML手册/泛化.gif" alt=""></p>
+<hr>
+<p><strong>实现（Realization）</strong><br>【实现关系】：是一种类与接口的<strong>实现</strong>关系, 表示类是接口所有特征和行为的实现<br>【箭头指向】：带<strong>三角箭头的虚线</strong>，箭头<strong>指向接口</strong><br><img src="/2020/05/15/uml-shou-ce/UML手册/实现.gif" alt=""></p>
+<hr>
+<p><strong>关联（Association)</strong><br>【关联关系】：是一种<strong>拥有</strong>的关系, 它使一个类知道另一个类的属性和方法；如：老师与学生，学生与课程，关联可以是双向的，也可以是单向的。双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。<br>【箭头及指向】：带<strong>普通箭头</strong>（或<strong>实心三角形箭头</strong>）<strong>的实心线</strong>，<strong>指向被拥有者</strong><br>【代码体现】：成员变量<br><img src="/2020/05/15/uml-shou-ce/UML手册/关联.gif" alt=""></p>
+<p>老师与学生是双向关联，老师有多名学生，学生也可能有多名老师。但学生与某课程间的关系为单向关联，一名学生可能要上多门课程，课程是个抽象的东西他不拥有学生。</p>
+<hr>
+<p><strong>聚合（Aggregation）</strong><br> 【聚合关系】：是<strong>整体与部分</strong>的关系, 且<strong>部分</strong>可以离开整体而<strong>单独存在</strong>. 如车和轮胎是整体和部分的关系, 轮胎离开车仍然可以存在.聚合关系是<strong>关联关系的一种</strong>，是强的关联关系；关联和聚合在语法上无法区分，必须考察具体的逻辑关系。<br> 【箭头及指向】：带<strong>空心菱形的实心线</strong>，菱形<strong>指向整体</strong><br> 【代码体现】：成员变量<br><img src="/2020/05/15/uml-shou-ce/UML手册/聚合.gif" alt=""></p>
+<hr>
+<p><strong>组合(Composition)</strong><br>【组合关系】：是<strong>整体与部分</strong>的关系, 但<strong>部分不能</strong>离开整体而<strong>单独存在</strong>. 如公司和部门是整体和部分的关系, 没有公司就不存在部门. 组合关系是<strong>关联关系的一种</strong>，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期<br>【箭头及指向】：带<strong>实心菱形的实线</strong>，菱形<strong>指向整体</strong><br>【代码体现】：成员变量</p>
+<p><img src="/2020/05/15/uml-shou-ce/UML手册/组合.gif" alt=""></p>
+<hr>
+<p><strong>依赖(Dependency)</strong><br>【依赖关系】：是一种<strong>使用</strong>的关系,  即一个类的实现需要另一个类的协助, 所以要尽量不使用双向的互相依赖.<br>【箭头及指向】：带<strong>箭头的虚线</strong>，<strong>指向被使用者</strong><br>【代码表现】：局部变量、方法的参数或者对静态方法的调用<br><img src="/2020/05/15/uml-shou-ce/UML手册/依赖.gif" alt=""></p>
+<hr>
+<p>有什么区别？</p>
+<p>各种关系的强弱顺序：<br>泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖</p>
+<h6 id="四、总结问题"><a href="#四、总结问题" class="headerlink" title="四、总结问题"></a>四、总结问题</h6><p>首先，我们要从结论不断地分拆，直到那个不可辩驳的事实；<br>其次，每一个层级都要控制要点的数目，要突出重点。</p>
+<p>拓展：<br>序列图、用例图</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -800,10 +837,8 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            UML一、明确和理解问题问题本质是什么：不理解建模语言，看不懂建模图，知识盲区
+1.找出对方关心的问题点    看懂并会画建模图2.明确解决问题的目标    看懂、会画、长久记忆3.明确可以用来解决这个问题的资源百度搜索    参考博文：h
                         
                     </div>
                     <div class="publish-info">
@@ -1010,7 +1045,7 @@ BLOG MAP
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.5k</span>&nbsp;字
+                class="white-color">9.6k</span>&nbsp;字
             
             
             
