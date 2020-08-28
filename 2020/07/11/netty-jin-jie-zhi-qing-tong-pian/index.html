@@ -4,9 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="UML手册, Colorful">
-    <meta name="description" content="UML一、明确和理解问题问题本质是什么：不理解建模语言，看不懂建模图，知识盲区
-1.找出对方关心的问题点    看懂并会画建模图2.明确解决问题的目标    看懂、会画、长久记忆3.明确可以用来解决这个问题的资源百度搜索    参考博文：h">
+    <meta name="keywords" content="Netty进阶之青铜篇, Colorful">
+    <meta name="description" content="
+走进Java NIO
+
+目标Java的I/O演进之路
+    1.掌握相关概念
+    2.了解UNIX系统常用的I/O模型
+    3.了解Java的I/O历史演进
+详情Java的I/O演进之路(了解)几个概念文件描述符是什么在Linu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>UML手册 | Colorful</title>
+    <title>Netty进阶之青铜篇 | Colorful</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/caihong32.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -374,7 +380,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        UML手册
+                        Netty进阶之青铜篇
                     </div>
                 </div>
             </div>
@@ -510,21 +516,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-15
+                    2020-07-11
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        593
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        2 分
                     </div>
                     
                 
@@ -540,46 +546,39 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h3><h6 id="一、明确和理解问题"><a href="#一、明确和理解问题" class="headerlink" title="一、明确和理解问题"></a>一、明确和理解问题</h6><p><strong>问题本质是什么</strong>：<br>不理解建模语言，看不懂建模图，知识盲区</p>
-<p><strong>1.找出对方关心的问题点</strong><br>    看懂并会画建模图<br><strong>2.明确解决问题的目标</strong><br>    看懂、会画、长久记忆<br><strong>3.明确可以用来解决这个问题的资源</strong><br>百度搜索<br>    参考博文：<br><a href="https://blog.csdn.net/suxinpingtao51/article/details/8011335" target="_blank" rel="noopener">https://blog.csdn.net/suxinpingtao51/article/details/8011335</a></p>
-<h6 id="二、拆分和定位问题"><a href="#二、拆分和定位问题" class="headerlink" title="二、拆分和定位问题"></a>二、拆分和定位问题</h6><p><strong>原问题</strong><br>什么是UML？<br>UML有几种类图？<br>类图分别是什么<br>有什么区别？<br>引用于哪些场景？</p>
-<p><strong>公式思维</strong></p>
-<p>UML（常见） = 泛化（继承） + 实现 + 组合 + 聚合 + 关联 + 依赖</p>
-<p><strong>推理模式(假设驱动/构建问题树)</strong></p>
-<p><strong>MECE法则</strong></p>
-<p><strong>横纵对比看数据</strong><br><img src="/2020/05/15/uml-shou-ce/source/_posts/uml-shou-ce/zongtu.gif" alt=""></p>
-<h6 id="三、提出解决方案"><a href="#三、提出解决方案" class="headerlink" title="三、提出解决方案"></a>三、提出解决方案</h6><ul>
-<li>什么是UML？</li>
-</ul>
-<p>统一建模语言(Unified Modeling Language，UML)是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言，是非专利的第三代建模和规约语言。UML使用面向对象设计的的建模工具，但独立于任何具体程序设计语言。</p>
+                <blockquote>
+<p>走进Java NIO<br><a id="more"></a></p>
+</blockquote>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><pre><code>Java的I/O演进之路
+    1.掌握相关概念
+    2.了解UNIX系统常用的I/O模型
+    3.了解Java的I/O历史演进
+</code></pre><h3 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h3><h4 id="Java的I-O演进之路-了解"><a href="#Java的I-O演进之路-了解" class="headerlink" title="Java的I/O演进之路(了解)"></a>Java的I/O演进之路(了解)</h4><h5 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h5><h5 id="文件描述符"><a href="#文件描述符" class="headerlink" title="文件描述符"></a>文件描述符</h5><h6 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h6><pre><code>在Linux中,外部设备都被看作是一个文件,即Linux操作一个外部设备就是操作一个文件,对文件的读写操作会调用内核提供的系统命令,返回一
+个file descriptor(fd,文件描述符)
+</code></pre><h5 id="干什么"><a href="#干什么" class="headerlink" title="干什么"></a>干什么</h5><pre><code>fd的作用是记录一个数组,这个数字指向内核中的一个结构体,这个结构体记录了文件的路径,数据区等一些属性
+</code></pre><h5 id="UNIX的5种I-O模型"><a href="#UNIX的5种I-O模型" class="headerlink" title="UNIX的5种I/O模型"></a>UNIX的5种I/O模型</h5><h6 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h6><p>操作系统是支持异步I/O（NIO）的</p>
+<h6 id="阻塞I-O模型"><a href="#阻塞I-O模型" class="headerlink" title="阻塞I/O模型"></a>阻塞I/O模型</h6><pre><code>核心：等待一个流程完成
+1.最常用
+2.默认情况下,所有文件都是被阻塞的,从调用开始到被返回进程都是阻塞状态
+</code></pre><h6 id="非阻塞I-O模型"><a href="#非阻塞I-O模型" class="headerlink" title="非阻塞I/O模型"></a>非阻塞I/O模型</h6><pre><code>核心：不等待,轮询检测
+</code></pre><h6 id="I-O多路复用模型"><a href="#I-O多路复用模型" class="headerlink" title="I/O多路复用模型"></a>I/O多路复用模型</h6><pre><code>select/poll
+1.进程将一个或多个fd传递个select系统或poll系统调用
+2.阻塞在select
+3.顺序扫描fd,支持的fd数量有限
+epoll
+1.基于事件驱动方式代替顺序扫描,性能更高
+</code></pre><h6 id="信号驱动I-O模型"><a href="#信号驱动I-O模型" class="headerlink" title="信号驱动I/O模型"></a>信号驱动I/O模型</h6><pre><code>核心：信号通知,收到信号执行响应的步骤,非阻塞
+</code></pre><h6 id="异步I-O模型"><a href="#异步I-O模型" class="headerlink" title="异步I/O模型"></a>异步I/O模型</h6><pre><code>核心：告知内核启动某个操作,并在操作完这个操作,给个通知
+与信号驱动I/O的区别：信号I/O通知过去做，异步I/O通知已完成
+</code></pre><h5 id="Java的I-O演进"><a href="#Java的I-O演进" class="headerlink" title="Java的I/O演进"></a>Java的I/O演进</h5><p>1.Java1.4之前早期版本遇到的问题</p>
 <ul>
-<li>UML有几种类图？</li>
+<li>没有缓冲区,I/O性能存在问题</li>
+<li>没有C系列的Channel概念,只有输入和输出流</li>
+<li>同步阻塞式I/O通信(BIO),会导致通信线程被长时间阻塞</li>
+<li>支持的字符集有限,硬件可移植性不好</li>
 </ul>
-<p>常见的有以下几种关系: 泛化（Generalization）,  实现（Realization）, 关联（Association), 聚合（Aggregation）, 组合(Composition), 依赖(Dependency)</p>
-<ul>
-<li>类图分别是什么，有什么区别？</li>
-</ul>
-<hr>
-<p><strong>泛化（Generalization）</strong><br>【泛化关系】：是一种<strong>继承</strong>关系, 表示一般与特殊的关系, 它指定了子类如何特化父类的所有特征和行为. 例如：老虎是动物的一种, 即有老虎的特性也有动物的共性.<br>【箭头指向】：带<strong>三角箭头的实线</strong>，箭头<strong>指向父类</strong></p>
-<p><img src="/2020/05/15/uml-shou-ce/source/_posts/uml-shou-ce/fanhua.gif" alt=""></p>
-<hr>
-<p><strong>实现（Realization）</strong><br>【实现关系】：是一种类与接口的<strong>实现</strong>关系, 表示类是接口所有特征和行为的实现<br>【箭头指向】：带<strong>三角箭头的虚线</strong>，箭头<strong>指向接口</strong><br><img src="/2020/05/15/uml-shou-ce/source/_posts/uml-shou-ce/shixian.gif" alt=""></p>
-<hr>
-<p><strong>关联（Association)</strong><br>【关联关系】：是一种<strong>拥有</strong>的关系, 它使一个类知道另一个类的属性和方法；如：老师与学生，学生与课程，关联可以是双向的，也可以是单向的。双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。<br>【箭头及指向】：带<strong>普通箭头</strong>（或<strong>实心三角形箭头</strong>）<strong>的实心线</strong>，<strong>指向被拥有者</strong><br>【代码体现】：成员变量<br><img src="/2020/05/15/uml-shou-ce/source/_posts/uml-shou-ce/guanlian.gif" alt=""></p>
-<p>老师与学生是双向关联，老师有多名学生，学生也可能有多名老师。但学生与某课程间的关系为单向关联，一名学生可能要上多门课程，课程是个抽象的东西他不拥有学生。</p>
-<hr>
-<p><strong>聚合（Aggregation）</strong><br> 【聚合关系】：是<strong>整体与部分</strong>的关系, 且<strong>部分</strong>可以离开整体而<strong>单独存在</strong>. 如车和轮胎是整体和部分的关系, 轮胎离开车仍然可以存在.聚合关系是<strong>关联关系的一种</strong>，是强的关联关系；关联和聚合在语法上无法区分，必须考察具体的逻辑关系。<br> 【箭头及指向】：带<strong>空心菱形的实心线</strong>，菱形<strong>指向整体</strong><br> 【代码体现】：成员变量<br><img src="/2020/05/15/uml-shou-ce/source/_posts/uml-shou-ce/juhe.gif" alt=""></p>
-<hr>
-<p><strong>组合(Composition)</strong><br>【组合关系】：是<strong>整体与部分</strong>的关系, 但<strong>部分不能</strong>离开整体而<strong>单独存在</strong>. 如公司和部门是整体和部分的关系, 没有公司就不存在部门. 组合关系是<strong>关联关系的一种</strong>，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期<br>【箭头及指向】：带<strong>实心菱形的实线</strong>，菱形<strong>指向整体</strong><br>【代码体现】：成员变量</p>
-<p><img src="/2020/05/15/uml-shou-ce/source/_posts/uml-shou-ce/zuhe.gif" alt=""></p>
-<hr>
-<p><strong>依赖(Dependency)</strong><br>【依赖关系】：是一种<strong>使用</strong>的关系,  即一个类的实现需要另一个类的协助, 所以要尽量不使用双向的互相依赖.<br>【箭头及指向】：带<strong>箭头的虚线</strong>，<strong>指向被使用者</strong><br>【代码表现】：局部变量、方法的参数或者对静态方法的调用<br><img src="/2020/05/15/uml-shou-ce/source/_posts/uml-shou-ce/yilai.gif" alt=""></p>
-<hr>
-<p>有什么区别？</p>
-<p>各种关系的强弱顺序：<br>泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖</p>
-<h6 id="四、总结问题"><a href="#四、总结问题" class="headerlink" title="四、总结问题"></a>四、总结问题</h6><p>首先，我们要从结论不断地分拆，直到那个不可辩驳的事实；<br>其次，每一个层级都要控制要点的数目，要突出重点。</p>
-<p>拓展：<br>序列图、用例图</p>
-<script>
+<p>2.2002年JDK1.4发布,开始支持非阻塞I/O</p>
+<h4 id="NIO入门"><a href="#NIO入门" class="headerlink" title="NIO入门"></a>NIO入门</h4><h5 id="BIO编程"><a href="#BIO编程" class="headerlink" title="BIO编程"></a>BIO编程</h5><h5 id="伪异步I-O编程"><a href="#伪异步I-O编程" class="headerlink" title="伪异步I/O编程"></a>伪异步I/O编程</h5><h5 id="NIO编程"><a href="#NIO编程" class="headerlink" title="NIO编程"></a>NIO编程</h5><h5 id="AIO编程"><a href="#AIO编程" class="headerlink" title="AIO编程"></a>AIO编程</h5><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -757,8 +756,8 @@
                 </a>
             </div>
             <br/>
-            <a  href="/2020/05/15/uml-shou-ce/">
-                《UML手册》
+            <a  href="/2020/07/11/netty-jin-jie-zhi-qing-tong-pian/">
+                《Netty进阶之青铜篇》
             </a> 由
             <a href="http://tryto.top">
                 571
@@ -800,7 +799,7 @@
         repo: 'feelingWu.github.io',
         owner: 'feelingWu',
         admin: "feelingWu",
-        id: '2020-05-15T11-53-06',
+        id: '2020-07-11T08-54-02',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -821,9 +820,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/07/11/netty-jin-jie-zhi-qing-tong-pian/">
                     <div class="card-image">
@@ -847,9 +847,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -862,6 +862,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -880,38 +881,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/14/bo-ke-dao-tu/">
+                <a href="/2020/05/15/uml-shou-ce/">
                     <div class="card-image">
                         
-                        <img src="/cover/feeling/0x0-1.jpg" class="responsive-img" alt="博客导图">
+                        <img src="/cover/" class="responsive-img" alt="UML手册">
                         
-                        <span class="card-title">博客导图</span>
+                        <span class="card-title">UML手册</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-博客导图
-
-  
-BLOG MAP
-
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.da
+                            UML一、明确和理解问题问题本质是什么：不理解建模语言，看不懂建模图，知识盲区
+1.找出对方关心的问题点    看懂并会画建模图2.明确解决问题的目标    看懂、会画、长久记忆3.明确可以用来解决这个问题的资源百度搜索    参考博文：h
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/FEELING/" class="post-category">
-                                    FEELING
+                            <a href="/categories/INNER/" class="post-category">
+                                    INNER
                                 </a>
                             
                             
@@ -921,12 +915,8 @@ BLOG MAP
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/feeling/">
-                        <span class="chip bg-color">feeling</span>
-                    </a>
-                    
-                    <a href="/tags/MAP/">
-                        <span class="chip bg-color">MAP</span>
+                    <a href="/tags/inner/">
+                        <span class="chip bg-color">inner</span>
                     </a>
                     
                 </div>
