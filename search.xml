@@ -50,7 +50,7 @@
   <entry>
     <title><![CDATA[流年笑掷,未来可期]]></title>
     <url>%2F2020%2F05%2F14%2Fliu-nian-xiao-zhi-wei-lai-ke-qi%2F</url>
-    <content type="text"><![CDATA[2020 写在前面 2020-05-14 撸着最无趣的代码,喝着最寡淡无味的水。学会输出… 2020 年中跟近 2020-8-29 不经意间时间从无限忙碌的循环中流逝,学会抽身,坚持输出… 2020 年末总结 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <content type="text"><![CDATA[2020 写在前面 2020-05-14 撸着最无趣的代码,喝着最寡淡无味的水。学会输出… 2020 年中跟近 2020-8-29 不经意间时间从无限忙碌的循环中流逝,学会抽身,坚持输出… 2020-9-1 文档输出 + 用起来 9月 Java集中强化 + 设计模式 + 金融市场 10月 JVM + 金融市场 11月 多线程并发 + 金融市场 12月 Python + android + 金融市场 2020 年末总结 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>FEELING</category>
       </categories>
