@@ -474,7 +474,7 @@
 <p><a href="https://arthas.aliyun.com/doc/" target="_blank" rel="noopener">Arthas传送门</a></p>
 <h3 id="三、辅助Druid-SQL监控"><a href="#三、辅助Druid-SQL监控" class="headerlink" title="三、辅助Druid SQL监控"></a>三、辅助Druid SQL监控</h3><p>本次也不在说明，后出专题讲解，附一张图</p>
 <p><img src="/2020/11/28/system-optimize/1-1-5.png" alt=""></p>
-<h2 id="最终问题定位在"><a href="#最终问题定位在" class="headerlink" title="最终问题定位在"></a>最终问题定位在</h2><p>堆内存占满，新创建对象时无法分配足够的内存，引起频繁GC</p>
+<h2 id="最终问题定位在"><a href="#最终问题定位在" class="headerlink" title="最终问题定位在"></a>最终问题定位在</h2><p><strong>堆内存占满，新创建对象时无法分配足够的内存，引起频繁GC</strong></p>
 <p>1.程序频繁请求RPC接口得到的响应慢，耗时过大；<br>    解决方案：由于获取的数据实时性要求不高，改为缓存处理，避免实时请求。</p>
 <p>2.客户端频繁请求某个接口，且接口中的sql效率非常低,导致了sql连接长时间被占用。<br>    解决方案：由于该接口历史遗留，且和对应的调用客户端同事确认该接口现今已用处不大，因此注释掉了该接口。</p>
 <p>3.频繁收到回调，随开启了多线程处理但由于有线程锁，使得其他线程被block，实则依然是个单线程处理，消费速度赶不上生产速度，线程积压。<br>    解决方案：确保安全的情况下，关闭了线程锁。</p>
@@ -533,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/10/23/docker/" rel="next" title="Docker,轻量级的虚拟化技术">
-                <i class="fa fa-chevron-left"></i> Docker,轻量级的虚拟化技术
+              <a href="/2020/10/23/docker-installs/" rel="next" title="Docker Installs">
+                <i class="fa fa-chevron-left"></i> Docker Installs
               </a>
             
           </div>
