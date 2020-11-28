@@ -43,16 +43,16 @@
   </entry>
   
   <entry>
-    <title>Docker,轻量级的虚拟化技术</title>
-    <link href="http://blog.tanguo.store/2020/10/23/docker/"/>
-    <id>http://blog.tanguo.store/2020/10/23/docker/</id>
+    <title>Docker Installs</title>
+    <link href="http://blog.tanguo.store/2020/10/23/docker-installs/"/>
+    <id>http://blog.tanguo.store/2020/10/23/docker-installs/</id>
     <published>2020-10-23T08:46:36.000Z</published>
     <updated>2020-10-23T08:46:36.000Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;一个利用了lxc的技术的一个虚拟化引擎。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;docker 安装软件工具&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
@@ -68,16 +68,16 @@
   </entry>
   
   <entry>
-    <title>Docker Installs</title>
-    <link href="http://blog.tanguo.store/2020/10/23/docker-installs/"/>
-    <id>http://blog.tanguo.store/2020/10/23/docker-installs/</id>
+    <title>Docker,轻量级的虚拟化技术</title>
+    <link href="http://blog.tanguo.store/2020/10/23/docker/"/>
+    <id>http://blog.tanguo.store/2020/10/23/docker/</id>
     <published>2020-10-23T08:46:36.000Z</published>
     <updated>2020-10-23T08:46:36.000Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;docker 安装软件工具&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      &lt;h1 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;一个利用了lxc的技术的一个虚拟化引擎。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
