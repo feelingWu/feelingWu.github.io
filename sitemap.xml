@@ -2,16 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.tanguo.store/2020/11/28/xi-tong-you-hua-xiao-ji-cpu-chang-shi-jian-man-fu-he-yun-xing/</loc>
+    <loc>http://blog.tanguo.store/2020/11/28/system-optimize/</loc>
     
     <lastmod>2020-11-27T16:00:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.tanguo.store/2020/10/23/docker-installs/</loc>
-    
-    <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     
   </url>
   
@@ -23,7 +16,7 @@
   </url>
   
   <url>
-    <loc>http://blog.tanguo.store/2020/10/23/hexo-manual/</loc>
+    <loc>http://blog.tanguo.store/2020/10/23/docker-installs/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     
@@ -31,6 +24,13 @@
   
   <url>
     <loc>http://blog.tanguo.store/2020/10/23/linux-installs/</loc>
+    
+    <lastmod>2020-10-23T08:46:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.tanguo.store/2020/10/23/hexo-manual/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     
