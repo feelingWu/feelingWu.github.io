@@ -462,7 +462,7 @@
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>linux命令排查 + Arthas监控 + Druid sql 监控</p>
 <h1 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h1><h2 id="一、Linux命令排查，方法如下："><a href="#一、Linux命令排查，方法如下：" class="headerlink" title="一、Linux命令排查，方法如下："></a>一、Linux命令排查，方法如下：</h2><h3 id="1-显示进程列表，定位进程号"><a href="#1-显示进程列表，定位进程号" class="headerlink" title="1.显示进程列表，定位进程号"></a>1.显示进程列表，定位进程号</h3><p>在<strong>top</strong>命令下，按<strong>shift+H</strong>查看cpu占用最高进程(<strong>PID</strong>:21659)</p>
 <p><img src="/2020/11/28/system-optimize/1-1-2.png" alt=""></p>
-<h3 id="2-显示线程列表，定位线程号，找到哪些线程占用高耗时长"><a href="#2-显示线程列表，定位线程号，找到哪些线程占用高耗时长" class="headerlink" title="2.显示线程列表，定位线程号，找到哪些线程占用高耗时长"></a>2.显示线程列表，定位线程号，找到哪些线程占用高耗时长</h3><p>命令：<code>ps -mp **pid** -o THREAD,tid,time | sort -rn | more</code></p>
+<h3 id="2-显示线程列表，定位线程号，找到哪些线程占用高耗时长"><a href="#2-显示线程列表，定位线程号，找到哪些线程占用高耗时长" class="headerlink" title="2.显示线程列表，定位线程号，找到哪些线程占用高耗时长"></a>2.显示线程列表，定位线程号，找到哪些线程占用高耗时长</h3><p>命令：<code>ps -mp pid -o THREAD,tid,time | sort -rn | more</code></p>
 <p>ex：ps -mp 21659 -o THREAD,tid,time （shift+H）</p>
 <p>ps：截图中pid写成24275原因是由于中途重启过一次程序，原PID：21659 变更成 PID：24275，实则都是同一个Java程序</p>
 <p>其中TID：24737、24742、24745，耗时较长占用CPU率较高</p>
@@ -534,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/10/23/docker-installs/" rel="next" title="Docker Installs">
-                <i class="fa fa-chevron-left"></i> Docker Installs
+              <a href="/2020/10/23/docker/" rel="next" title="Docker,轻量级的虚拟化技术">
+                <i class="fa fa-chevron-left"></i> Docker,轻量级的虚拟化技术
               </a>
             
           </div>
