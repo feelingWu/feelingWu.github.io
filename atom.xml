@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.tanguo.store/"/>
-  <updated>2020-11-27T16:00:00.000Z</updated>
+  <updated>2021-01-05T10:48:00.000Z</updated>
   <id>http://blog.tanguo.store/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java设计模式</title>
+    <link href="http://blog.tanguo.store/2021/01/05/design-pattern/"/>
+    <id>http://blog.tanguo.store/2021/01/05/design-pattern/</id>
+    <published>2021-01-05T10:48:00.000Z</published>
+    <updated>2021-01-05T10:48:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;概述：&lt;br&gt; 本质：面向对象设计原则的实际运用，是对类的封装、继承和多态性以及类的关联关系和组合关系的充分理解。&lt;br&gt; 分类:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 创建型模式：共5种，用于描述“怎样创建对象”，主要特点是“将对象的创建与使用分离”(解耦)。
+2. 结构型模式：共7种，用于描述如何将类或对象按某种布局组成更大的结构。
+3. 行为型模式：共11种，用于描述类或对象之间怎样相互协作共同完成单个对象无法单独完成的任务，以及怎样分配职责。
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="http://blog.tanguo.store/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="java" scheme="http://blog.tanguo.store/tags/java/"/>
+    
+      <category term="设计模式" scheme="http://blog.tanguo.store/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>系统优化小记：CPU长时间满负荷运行</title>
@@ -31,7 +58,7 @@
     
     </summary>
     
-      <category term="软件程序" scheme="http://blog.tanguo.store/categories/%E8%BD%AF%E4%BB%B6%E7%A8%8B%E5%BA%8F/"/>
+      <category term="编程" scheme="http://blog.tanguo.store/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
       <category term="运维" scheme="http://blog.tanguo.store/tags/%E8%BF%90%E7%BB%B4/"/>
