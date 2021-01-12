@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.tanguo.store/2021/01/12/study-guide/</loc>
+    
+    <lastmod>2021-01-12T12:04:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.tanguo.store/2021/01/05/design-pattern/</loc>
     
     <lastmod>2021-01-05T10:48:00.000Z</lastmod>
@@ -30,14 +37,14 @@
   </url>
   
   <url>
-    <loc>http://blog.tanguo.store/2020/10/23/hexo-manual/</loc>
+    <loc>http://blog.tanguo.store/2020/10/23/linux-installs/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.tanguo.store/2020/10/23/linux-installs/</loc>
+    <loc>http://blog.tanguo.store/2020/10/23/hexo-manual/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     
