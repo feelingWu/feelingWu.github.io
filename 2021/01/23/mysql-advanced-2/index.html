@@ -115,7 +115,7 @@
 <meta property="og:image" content="http://blog.tanguo.store/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1556087759615.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1556087793738.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1556075336630.png">
-<meta property="og:image" content="http://blog.tanguo.store/%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99/%E8%AF%BE%E7%A8%8B%E8%90%A5%E9%94%80/Mysql%E9%AB%98%E7%BA%A7/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/day-02/%E6%96%87%E6%A1%A3/source/_posts/mysql-advanced-4/1551347590309.png">
+<meta property="og:image" content="http://blog.tanguo.store/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1551347590309.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1556075073836.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1556076359503.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1551408083254.png">
@@ -804,7 +804,7 @@
     <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
 <span class="token punctuation">)</span><span class="token keyword">ENGINE</span><span class="token operator">=</span>myisam <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
 </code></pre>
-<p><img src="/2021/01/23/mysql-advanced-2/../../../../../../%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99/%E8%AF%BE%E7%A8%8B%E8%90%A5%E9%94%80/Mysql%E9%AB%98%E7%BA%A7/%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99/day-02/%E6%96%87%E6%A1%A3/source/_posts/mysql-advanced-4/1551347590309.png" alt="1551347590309"> </p>
+<p><img src="/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1551347590309.png" alt="1551347590309"> </p>
 <p>通过测试，我们发现，在MyISAM存储引擎中，是没有事务控制的 ；</p>
 <p><strong>文件存储方式</strong></p>
 <p>每个MyISAM在磁盘上存储成3个文件，其文件名都和表名相同，但拓展名分别是 ： </p>
@@ -858,7 +858,7 @@
 <p><img src="/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1551408216185.png" alt="1551408216185"> </p>
 <p>​     </p>
 <p>4）. 往order_all中插入一条记录 ，由于在MERGE表定义时，INSERT_METHOD 选择的是LAST，那么插入的数据会想最后一张表中插入。</p>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">insert</span> <span class="token keyword">into</span> order_all <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">10000.0</span><span class="token punctuation">,</span><span class="token string">'西安'</span><span class="token punctuation">)</span>；
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">insert</span> <span class="token keyword">into</span> order_all <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">10000.0</span><span class="token punctuation">,</span><span class="token string">'西安'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><img src="/2021/01/23/mysql-advanced-2/source/_posts/mysql-advanced-2/1551408519889.png" alt="1551408519889">          </p>
 <h4 id="2-3-存储引擎的选择"><a href="#2-3-存储引擎的选择" class="headerlink" title="2.3 存储引擎的选择"></a>2.3 存储引擎的选择</h4><p>​    在选择存储引擎时，应该根据应用系统的特点选择合适的存储引擎。对于复杂的应用系统，还可以根据实际情况选择多种存储引擎进行组合。以下是几种常用的存储引擎的使用环境。</p>
