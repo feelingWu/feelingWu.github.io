@@ -84,7 +84,7 @@
 
 
 
-  <meta name="keywords" content="PAGE," />
+  <meta name="keywords" content="MySQL数据库优化之组合拳(一)," />
 
 
 
@@ -98,7 +98,7 @@
 
 
 <meta name="description" content="非原创图文,图文来源于黑马官网,此处仅作为备份学习">
-<meta name="keywords" content="PAGE">
+<meta name="keywords" content="MySQL数据库优化之组合拳(一)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL数据库优化之组合拳(一)">
 <meta property="og:url" content="http://blog.tanguo.store/2021/01/17/mysql-advanced-1/index.html">
@@ -472,7 +472,7 @@
 <h2 id="MySQL数据库优化总概"><a href="#MySQL数据库优化总概" class="headerlink" title="MySQL数据库优化总概"></a>MySQL数据库优化总概</h2><table>
 <thead>
 <tr>
-<th>组合拳（一）</th>
+<th>🧑组合拳（一）</th>
 <th>组合拳（二）</th>
 <th>组合拳（三）</th>
 <th>组合拳（四）</th>
@@ -597,33 +597,33 @@
 <h4 id="1-4-索引分类"><a href="#1-4-索引分类" class="headerlink" title="1.4 索引分类"></a>1.4 索引分类</h4><p>1） 单值索引 ：即一个索引只包含单个列，一个表可以有多个单列索引<br>2） 唯一索引 ：索引列的值必须唯一，但允许有空值<br>3） 复合索引 ：即一个索引包含多个列</p>
 <h4 id="1-5-索引语法"><a href="#1-5-索引语法" class="headerlink" title="1.5 索引语法"></a>1.5 索引语法</h4><p>索引在创建表的时候，可以同时创建， 也可以随时增加新的索引。</p>
 <p>准备环境:</p>
-<pre class=" language-SQL"><code class="language-SQL">create database demo_01 default charset=utf8mb4;
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> demo_01 <span class="token keyword">default</span> <span class="token keyword">charset</span><span class="token operator">=</span>utf8mb4<span class="token punctuation">;</span>
 
-use demo_01;
+<span class="token keyword">use</span> demo_01<span class="token punctuation">;</span>
 
-CREATE TABLE `city` (
-  `city_id` int(11) NOT NULL AUTO_INCREMENT,
-  `city_name` varchar(50) NOT NULL,
-  `country_id` int(11) NOT NULL,
-  PRIMARY KEY (`city_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>city<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>city_id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>city_name<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>country_id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>city_id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
 
-CREATE TABLE `country` (
-  `country_id` int(11) NOT NULL AUTO_INCREMENT,
-  `country_name` varchar(100) NOT NULL,
-  PRIMARY KEY (`country_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>country<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>country_id<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>country_name<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
 
 
-insert into `city` (`city_id`, `city_name`, `country_id`) values(1,'西安',1);
-insert into `city` (`city_id`, `city_name`, `country_id`) values(2,'NewYork',2);
-insert into `city` (`city_id`, `city_name`, `country_id`) values(3,'北京',1);
-insert into `city` (`city_id`, `city_name`, `country_id`) values(4,'上海',1);
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>city<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>city_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>city_name<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'西安'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>city<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>city_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>city_name<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'NewYork'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>city<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>city_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>city_name<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">'北京'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>city<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>city_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>city_name<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token string">'上海'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-insert into `country` (`country_id`, `country_name`) values(1,'China');
-insert into `country` (`country_id`, `country_name`) values(2,'America');
-insert into `country` (`country_id`, `country_name`) values(3,'Japan');
-insert into `country` (`country_id`, `country_name`) values(4,'UK');
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>country<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_name<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'China'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>country<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_name<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'America'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>country<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_name<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">'Japan'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">`</span>country<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>country_id<span class="token punctuation">`</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>country_name<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token string">'UK'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="1-5-1-创建索引"><a href="#1-5-1-创建索引" class="headerlink" title="1.5.1 创建索引"></a>1.5.1 创建索引</h5><p>语法 ：     </p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">CREATE</span>     <span class="token punctuation">[</span><span class="token keyword">UNIQUE</span><span class="token operator">|</span>FULLTEXT<span class="token operator">|</span>SPATIAL<span class="token punctuation">]</span>  <span class="token keyword">INDEX</span> index_name 
@@ -844,7 +844,7 @@ index_col_name : column_name<span class="token punctuation">[</span><span class=
 <span class="token keyword">OUT</span>:   该参数作为输出<span class="token punctuation">,</span>也就是该参数可以作为返回值
 <span class="token keyword">INOUT</span>: 既可以作为输入参数<span class="token punctuation">,</span>也可以作为输出参数
 </code></pre>
-<p><strong>IN - 输入</strong></p>
+<p><strong>1) IN - 输入</strong></p>
 <p>示例  :<br>根据定义的身高变量，判定当前身高的所属的身材类型 </p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">delimiter</span> $
 
@@ -863,7 +863,7 @@ index_col_name : column_name<span class="token punctuation">[</span><span class=
 
 <span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
 </code></pre>
-<p><strong>OUT-输出</strong></p>
+<p><strong>2) OUT-输出</strong></p>
 <p>示例:</p>
 <p>根据传入的身高变量，获取当前身高的所属的身材类型  </p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">procedure</span> pro_test5<span class="token punctuation">(</span><span class="token operator">in</span> height <span class="token keyword">int</span> <span class="token punctuation">,</span> <span class="token keyword">out</span> description <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -1278,7 +1278,7 @@ before<span class="token operator">/</span><span class="token keyword">after</sp
       
         <div class="post-tags">
           
-            <a href="/tags/PAGE/" rel="tag"># PAGE</a>
+            <a href="/tags/MySQL数据库优化之组合拳-一/" rel="tag"># MySQL数据库优化之组合拳(一)</a>
           
         </div>
       
@@ -1300,6 +1300,10 @@ before<span class="token operator">/</span><span class="token keyword">after</sp
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/01/23/mysql-advanced-2/" rel="prev" title="MySQL数据库优化之组合拳(二)">
+                MySQL数据库优化之组合拳(二) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -1383,7 +1387,7 @@ before<span class="token operator">/</span><span class="token keyword">after</sp
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1405,7 +1409,7 @@ before<span class="token operator">/</span><span class="token keyword">after</sp
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
