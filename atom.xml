@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.tanguo.store/"/>
-  <updated>2021-02-19T13:18:10.000Z</updated>
+  <updated>2021-02-21T12:43:43.000Z</updated>
   <id>http://blog.tanguo.store/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三阶魔方教程</title>
+    <link href="http://blog.tanguo.store/2021/02/21/3ordercube/"/>
+    <id>http://blog.tanguo.store/2021/02/21/3ordercube/</id>
+    <published>2021-02-21T12:43:43.000Z</published>
+    <updated>2021-02-21T12:43:43.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;三阶魔方是玩任意阶魔方的基础&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="娱乐" scheme="http://blog.tanguo.store/categories/%E5%A8%B1%E4%B9%90/"/>
+    
+    
+      <category term="三阶" scheme="http://blog.tanguo.store/tags/%E4%B8%89%E9%98%B6/"/>
+    
+      <category term="魔方" scheme="http://blog.tanguo.store/tags/%E9%AD%94%E6%96%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>听者记2021</title>
@@ -271,31 +294,6 @@
   </entry>
   
   <entry>
-    <title>Linux Installs</title>
-    <link href="http://blog.tanguo.store/2020/10/23/linux-installs/"/>
-    <id>http://blog.tanguo.store/2020/10/23/linux-installs/</id>
-    <published>2020-10-23T08:46:36.000Z</published>
-    <updated>2020-10-23T08:46:36.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;Linux 软件工具安装&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="后端" scheme="http://blog.tanguo.store/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="运维" scheme="http://blog.tanguo.store/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-      <category term="后端" scheme="http://blog.tanguo.store/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="linux" scheme="http://blog.tanguo.store/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo操作手册</title>
     <link href="http://blog.tanguo.store/2020/10/23/hexo-manual/"/>
     <id>http://blog.tanguo.store/2020/10/23/hexo-manual/</id>
@@ -318,6 +316,31 @@
       <category term="博客" scheme="http://blog.tanguo.store/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://blog.tanguo.store/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Installs</title>
+    <link href="http://blog.tanguo.store/2020/10/23/linux-installs/"/>
+    <id>http://blog.tanguo.store/2020/10/23/linux-installs/</id>
+    <published>2020-10-23T08:46:36.000Z</published>
+    <updated>2020-10-23T08:46:36.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Linux 软件工具安装&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://blog.tanguo.store/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="运维" scheme="http://blog.tanguo.store/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="后端" scheme="http://blog.tanguo.store/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="linux" scheme="http://blog.tanguo.store/tags/linux/"/>
     
   </entry>
   
