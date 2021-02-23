@@ -100,7 +100,7 @@
 <meta name="description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)">
 <meta name="keywords" content="前端,HTTP,X-Frame-Options">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记iframe&#x2F;frame内嵌网页不显示问题">
+<meta property="og:title" content="记frame&#x2F;iframe内嵌网页不显示问题">
 <meta property="og:url" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/index.html">
 <meta property="og:site_name" content="TANGUO STORE">
 <meta property="og:description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)">
@@ -110,12 +110,9 @@
 <meta property="og:image" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/检测xfo配置.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/xfo浏览器兼容性.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/优酷嵌套解决方案.png">
-<meta property="og:image" content="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/X-Frame-Options?redirectlocale=en-US&redirectslug=The_X-FRAME-OPTIONS_response_header">
-<meta property="og:image" content="https://blog.csdn.net/qq_37193537/article/details/87086279">
-<meta property="og:image" content="http://cache.baiducontent.com/c?m=3yKvnBrULyInsKWE7o8-f-6T7oLBHdh_3ik8_2xWhZPlUb24PUsDN9GFVDND2_mXqgz5sID004p1CYGUGH4-PAFe5YHy-yTnyGyALm7JjXmBfZs2H32ZGXZ2r0JXwIRezabWPAM2JKQvKGpYGCUhbK&p=877ec54ad1c352fc57eff86d4f53&newp=c46fd315d9c441f50be29627610792695803ed6338d1db01298ffe0cc4241a1a1a3aecbf2c231305d6c4786306aa4f5bebf53571360634f1f689df08d2ecce7e75&s=cfcd208495d565ef&user=baidu&fm=sc&query=youku+sameorigin&qid=e61d7d2500073cd4&p1=2">
 <meta property="og:updated_time" content="2021-02-23T08:26:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记iframe&#x2F;frame内嵌网页不显示问题">
+<meta name="twitter:title" content="记frame&#x2F;iframe内嵌网页不显示问题">
 <meta name="twitter:description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)">
 <meta name="twitter:image" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/同源演示.png">
 
@@ -153,7 +150,7 @@
 
 
 
-  <title>记iframe/frame内嵌网页不显示问题 | TANGUO STORE</title>
+  <title>记frame/iframe内嵌网页不显示问题 | TANGUO STORE</title>
   
 
 
@@ -331,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">记iframe/frame内嵌网页不显示问题</h1>
+          <h1 class="post-title" itemprop="name headline">记frame/iframe内嵌网页不显示问题</h1>
         
 
         <div class="post-meta">
@@ -393,7 +390,7 @@
 
           
           
-             <span id="/2021/02/23/x-frame-options-sameorigin/" class="leancloud_visitors" data-flag-title="记iframe/frame内嵌网页不显示问题">
+             <span id="/2021/02/23/x-frame-options-sameorigin/" class="leancloud_visitors" data-flag-title="记frame/iframe内嵌网页不显示问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -469,7 +466,7 @@
 <h2 id="3-点击劫持"><a href="#3-点击劫持" class="headerlink" title="3.点击劫持"></a>3.点击劫持</h2><p>这种攻击在恶意站点诱导用户点击另一个站点的被覆盖元素时出现，另一个站点已经加载到了隐藏的frame或iframe中。</p>
 <pre><code>点击劫持的示例
 假设一个在线商店拥有一个页面，已登录的用户可以点击“购买”按钮来购买一个商品。用户为了方便，可以选择一直保持商店的登录状态。一个攻击者的站点可能在他们自己的页面上会创建一个“收藏”按钮，并且在一个透明的iframe中加载商店的页面，把“购买”的按钮隐藏起来覆盖在“收藏”上。如果用户访问了攻击者的站点，点击“收藏”按钮会触发对“购买”按钮的无意识的点击，不知不觉中便购买了商品。
-</code></pre><h1 id="二、X-Frame-Options"><a href="#二、X-Frame-Options" class="headerlink" title="二、X-Frame-Options"></a>二、X-Frame-Options</h1><h2 id="1-什么是X-Frame-Options"><a href="#1-什么是X-Frame-Options" class="headerlink" title="1.什么是X-Frame-Options"></a>1.什么是X-Frame-Options</h2><p>X-Frame-Options HTTP 响应头是用来给浏览器 指示允许一个页面 可否在 , <iframe>, <embed> 或者 <object> 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 clickjacking 攻击。</object></iframe></p>
+</code></pre><h1 id="二、X-Frame-Options"><a href="#二、X-Frame-Options" class="headerlink" title="二、X-Frame-Options"></a>二、X-Frame-Options</h1><h2 id="1-什么是X-Frame-Options"><a href="#1-什么是X-Frame-Options" class="headerlink" title="1.什么是X-Frame-Options"></a>1.什么是X-Frame-Options</h2><p>X-Frame-Options HTTP 响应头是用来给浏览器 指示允许一个页面 可否在”“,”<iframe>“, “<embed>“ 或者 “<object>“ 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 clickjacking 攻击。</object></iframe></p>
 <h2 id="2-X-Frame-Options有什么用"><a href="#2-X-Frame-Options有什么用" class="headerlink" title="2.X-Frame-Options有什么用"></a>2.X-Frame-Options有什么用</h2><p>用于点击劫持的防御：现代浏览器遵循X-Frame-Options协议头(RFC 7034规范),根据协议头不同配置,从而决定一个资源是否允许加载到frame或者iframe中。</p>
 <h2 id="3-如何配置"><a href="#3-如何配置" class="headerlink" title="3.如何配置"></a>3.如何配置</h2><blockquote>
 <p>Note: 设置 meta 标签是无效的！例如 <meta http-equiv="X-Frame-Options" content="deny"> 没有任何效果。<br>只有当像下面示例那样设置 HTTP 头 X-Frame-Options 才会生效。</p>
@@ -545,7 +542,7 @@ app.use(helmet.frameguard({ action: "sameorigin" }));
 app.use(frameguard({ action: 'sameorigin' }))
 </code></pre><h2 id="4-测评"><a href="#4-测评" class="headerlink" title="4.测评"></a>4.测评</h2><p><img src="/2021/02/23/x-frame-options-sameorigin/xfo浏览器兼容性.png" alt=""></p>
 <h1 id="三、最终结果"><a href="#三、最终结果" class="headerlink" title="三、最终结果"></a>三、最终结果</h1><p>1.猜测优酷开启了同源策略（sameorigin），所以我们的iframe无法内嵌其网页<br>2.解决方案，亲测可以<br><img src="/2021/02/23/x-frame-options-sameorigin/优酷嵌套解决方案.png" alt=""></p>
-<h1 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h1><p><img src="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/X-Frame-Options?redirectlocale=en-US&amp;redirectslug=The_X-FRAME-OPTIONS_response_header" alt="传送门1"><br><img src="https://blog.csdn.net/qq_37193537/article/details/87086279" alt="传送门2"><br><img src="http://cache.baiducontent.com/c?m=3yKvnBrULyInsKWE7o8-f-6T7oLBHdh_3ik8_2xWhZPlUb24PUsDN9GFVDND2_mXqgz5sID004p1CYGUGH4-PAFe5YHy-yTnyGyALm7JjXmBfZs2H32ZGXZ2r0JXwIRezabWPAM2JKQvKGpYGCUhbK&amp;p=877ec54ad1c352fc57eff86d4f53&amp;newp=c46fd315d9c441f50be29627610792695803ed6338d1db01298ffe0cc4241a1a1a3aecbf2c231305d6c4786306aa4f5bebf53571360634f1f689df08d2ecce7e75&amp;s=cfcd208495d565ef&amp;user=baidu&amp;fm=sc&amp;query=youku+sameorigin&amp;qid=e61d7d2500073cd4&amp;p1=2" alt="传送门3"></p>
+<h1 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/X-Frame-Options?redirectlocale=en-US&amp;redirectslug=The_X-FRAME-OPTIONS_response_header" target="_blank" rel="noopener">传送门1</a><br><a href="https://blog.csdn.net/qq_37193537/article/details/87086279" target="_blank" rel="noopener">传送门2</a><br><a href="http://cache.baiducontent.com/c?m=3yKvnBrULyInsKWE7o8-f-6T7oLBHdh_3ik8_2xWhZPlUb24PUsDN9GFVDND2_mXqgz5sID004p1CYGUGH4-PAFe5YHy-yTnyGyALm7JjXmBfZs2H32ZGXZ2r0JXwIRezabWPAM2JKQvKGpYGCUhbK&amp;p=877ec54ad1c352fc57eff86d4f53&amp;newp=c46fd315d9c441f50be29627610792695803ed6338d1db01298ffe0cc4241a1a1a3aecbf2c231305d6c4786306aa4f5bebf53571360634f1f689df08d2ecce7e75&amp;s=cfcd208495d565ef&amp;user=baidu&amp;fm=sc&amp;query=youku+sameorigin&amp;qid=e61d7d2500073cd4&amp;p1=2" target="_blank" rel="noopener">传送门3</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
