@@ -28,7 +28,7 @@
   <entry>
     <title><![CDATA[听者记2021]]></title>
     <url>%2F2021%2F02%2F19%2Ftingzheji2021%2F</url>
-    <content type="text"><![CDATA[涉猎阅未闻,蹔使心魂澄 《卓有成效的管理者》[2021-2-19] 真正重要的不是趋势本身,而是趋势改变。 《高情商是练出来的》[2021-2-20] 强调理性与感性，接收与改变之间的辩证平衡与协调 《微精通》[2021-2-21] 给人生创建一个抽奖系统 《魔鬼经济学1》[2021-2-22] 抛弃常规思维，从“数据分析”的视角,来找事情的真相 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <content type="text"><![CDATA[涉猎阅未闻,蹔使心魂澄 《卓有成效的管理者》[2021-2-19] 真正重要的不是趋势本身,而是趋势改变。 《高情商是练出来的》[2021-2-20] 强调理性与感性，接收与改变之间的辩证平衡与协调 《微精通》[2021-2-21] 给人生创建一个抽奖系统 《魔鬼经济学1》[2021-2-22] 抛弃常规思维，从“数据分析”的视角,来找事情的真相 《魔鬼经济学2》[2021-2-23] 从客观事实和数据出发，考察具体情境里人们道德选择。 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>视野</category>
       </categories>
