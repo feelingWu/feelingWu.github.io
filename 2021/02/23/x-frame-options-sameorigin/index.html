@@ -466,7 +466,7 @@
 <h2 id="3-点击劫持"><a href="#3-点击劫持" class="headerlink" title="3.点击劫持"></a>3.点击劫持</h2><p>这种攻击在恶意站点诱导用户点击另一个站点的被覆盖元素时出现，另一个站点已经加载到了隐藏的frame或iframe中。</p>
 <pre><code>点击劫持的示例
 假设一个在线商店拥有一个页面，已登录的用户可以点击“购买”按钮来购买一个商品。用户为了方便，可以选择一直保持商店的登录状态。一个攻击者的站点可能在他们自己的页面上会创建一个“收藏”按钮，并且在一个透明的iframe中加载商店的页面，把“购买”的按钮隐藏起来覆盖在“收藏”上。如果用户访问了攻击者的站点，点击“收藏”按钮会触发对“购买”按钮的无意识的点击，不知不觉中便购买了商品。
-</code></pre><h1 id="二、X-Frame-Options"><a href="#二、X-Frame-Options" class="headerlink" title="二、X-Frame-Options"></a>二、X-Frame-Options</h1><h2 id="1-什么是X-Frame-Options"><a href="#1-什么是X-Frame-Options" class="headerlink" title="1.什么是X-Frame-Options"></a>1.什么是X-Frame-Options</h2><p>X-Frame-Options HTTP 响应头是用来给浏览器 指示允许一个页面 可否在”“,”<iframe>“, “<embed>“ 或者 “<object>“ 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 clickjacking 攻击。</object></iframe></p>
+</code></pre><h1 id="二、X-Frame-Options"><a href="#二、X-Frame-Options" class="headerlink" title="二、X-Frame-Options"></a>二、X-Frame-Options</h1><h2 id="1-什么是X-Frame-Options"><a href="#1-什么是X-Frame-Options" class="headerlink" title="1.什么是X-Frame-Options"></a>1.什么是X-Frame-Options</h2><p>X-Frame-Options HTTP 响应头是用来给浏览器 指示允许一个页面 可否在&lt;frame&gt;,&lt;iframe&gt;, &lt;embed&gt; 或者 &lt;object&gt; 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 clickjacking 攻击。</p>
 <h2 id="2-X-Frame-Options有什么用"><a href="#2-X-Frame-Options有什么用" class="headerlink" title="2.X-Frame-Options有什么用"></a>2.X-Frame-Options有什么用</h2><p>用于点击劫持的防御：现代浏览器遵循X-Frame-Options协议头(RFC 7034规范),根据协议头不同配置,从而决定一个资源是否允许加载到frame或者iframe中。</p>
 <h2 id="3-如何配置"><a href="#3-如何配置" class="headerlink" title="3.如何配置"></a>3.如何配置</h2><blockquote>
 <p>Note: 设置 meta 标签是无效的！例如 <meta http-equiv="X-Frame-Options" content="deny"> 没有任何效果。<br>只有当像下面示例那样设置 HTTP 头 X-Frame-Options 才会生效。</p>
