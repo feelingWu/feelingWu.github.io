@@ -304,6 +304,308 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="571">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/btc-v.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TANGUO STORE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/02/23/x-frame-options-sameorigin/" itemprop="url">记iframe/frame内嵌网页不显示问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表</span>
+              
+              <time title="创建" itemprop="dateCreated datePublished" datetime="2021-02-23T16:26:35+08:00">
+                2021-02-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/02/23/x-frame-options-sameorigin/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/02/23/x-frame-options-sameorigin/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2021/02/23/x-frame-options-sameorigin/" class="leancloud_visitors" data-flag-title="记iframe/frame内嵌网页不显示问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">访客&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1.3k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">耗时 &asymp;</span>
+                
+                <span title="耗时">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)</p>
+</blockquote>
+<h1 id="一、预备知识点"><a href="#一、预备知识点" class="headerlink" title="一、预备知识点"></a>一、预备知识点</h1><h2 id="1-同源策略"><a href="#1-同源策略" class="headerlink" title="1.同源策略"></a>1.同源策略</h2><h3 id="1-1-什么是同源"><a href="#1-1-什么是同源" class="headerlink" title="1.1 什么是同源"></a>1.1 什么是同源</h3><p>URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。相反，只要协议，域名，端口有任何一个的不同，就被当作是跨域。<br><img src="/2021/02/23/x-frame-options-sameorigin/同源演示.png" alt=""></p>
+<h3 id="1-2-同源策略-Same-Origin-Policy-SOP"><a href="#1-2-同源策略-Same-Origin-Policy-SOP" class="headerlink" title="1.2 同源策略(Same-Origin-Policy(SOP))"></a>1.2 同源策略(Same-Origin-Policy(SOP))</h3><p>浏览器默认采用同源策略，禁止页面加载或执行与自身来源不同的域的任何脚本。</p>
+<pre><code>场景：
+一个恶意网站的页面通过iframe嵌入了银行的登录页面（二者不同源），如果没有同源限制，恶意网页上的javascript脚本就可以在用户登录银行的时候获取用户名和密码。
+
+浏览器中有哪些不受同源限制呢？
+&lt;script&gt;、&lt;img&gt;、&lt;iframe&gt;、&lt;link&gt;这些包含 src 属性的标签可以加载跨域资源。但浏览器限制了JavaScript的权限使其不能读、写加载的内容。
+</code></pre><h2 id="2-跨域"><a href="#2-跨域" class="headerlink" title="2.跨域"></a>2.跨域</h2><p>跨域是指从一个域的网页去请求另一个域的资源。</p>
+<h2 id="3-点击劫持"><a href="#3-点击劫持" class="headerlink" title="3.点击劫持"></a>3.点击劫持</h2><p>这种攻击在恶意站点诱导用户点击另一个站点的被覆盖元素时出现，另一个站点已经加载到了隐藏的frame或iframe中。</p>
+<pre><code>点击劫持的示例
+假设一个在线商店拥有一个页面，已登录的用户可以点击“购买”按钮来购买一个商品。用户为了方便，可以选择一直保持商店的登录状态。一个攻击者的站点可能在他们自己的页面上会创建一个“收藏”按钮，并且在一个透明的iframe中加载商店的页面，把“购买”的按钮隐藏起来覆盖在“收藏”上。如果用户访问了攻击者的站点，点击“收藏”按钮会触发对“购买”按钮的无意识的点击，不知不觉中便购买了商品。
+</code></pre><h1 id="二、X-Frame-Options"><a href="#二、X-Frame-Options" class="headerlink" title="二、X-Frame-Options"></a>二、X-Frame-Options</h1><h2 id="1-什么是X-Frame-Options"><a href="#1-什么是X-Frame-Options" class="headerlink" title="1.什么是X-Frame-Options"></a>1.什么是X-Frame-Options</h2><p>X-Frame-Options HTTP 响应头是用来给浏览器 指示允许一个页面 可否在 , <iframe>, <embed> 或者 <object> 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 clickjacking 攻击。</object></iframe></p>
+<h2 id="2-X-Frame-Options有什么用"><a href="#2-X-Frame-Options有什么用" class="headerlink" title="2.X-Frame-Options有什么用"></a>2.X-Frame-Options有什么用</h2><p>用于点击劫持的防御：现代浏览器遵循X-Frame-Options协议头(RFC 7034规范),根据协议头不同配置,从而决定一个资源是否允许加载到frame或者iframe中。</p>
+<h2 id="3-如何配置"><a href="#3-如何配置" class="headerlink" title="3.如何配置"></a>3.如何配置</h2><blockquote>
+<p>Note: 设置 meta 标签是无效的！例如 <meta http-equiv="X-Frame-Options" content="deny"> 没有任何效果。<br>只有当像下面示例那样设置 HTTP 头 X-Frame-Options 才会生效。</p>
+</blockquote>
+<h3 id="3-1-X-Frame-Options配置参数"><a href="#3-1-X-Frame-Options配置参数" class="headerlink" title="3.1 X-Frame-Options配置参数"></a>3.1 X-Frame-Options配置参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deny</td>
+<td>表示该页面不允许在 frame 中展示，即便是在相同域名的页面中嵌套也不允许。</td>
+<td>add_header X-Frame-Options deny;</td>
+</tr>
+<tr>
+<td>sameorigin</td>
+<td>表示该页面可以在相同域名页面的 frame 中展示。</td>
+<td>add_header X-Frame-Options sameorigin;</td>
+</tr>
+<tr>
+<td>allow-from</td>
+<td>表示该页面可以在指定来源的 frame 中展示。</td>
+<td>add_header X-Frame-Options allow-from <a href="https://example.com/" target="_blank" rel="noopener">https://example.com/</a>;</td>
+</tr>
+<tr>
+<td>allowall</td>
+<td>允许所有站点内嵌展示。</td>
+<td>add_header X-Frame-Options allowall;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-2-配置-Apache"><a href="#3-2-配置-Apache" class="headerlink" title="3.2 配置 Apache"></a>3.2 配置 Apache</h3><p>配置 Apache 在所有页面上发送 X-Frame-Options 响应头，需要把下面这行添加到 ‘site’ 的配置中:</p>
+<pre><code>Header always set X-Frame-Options "sameorigin"
+</code></pre><p>要将 Apache 的配置 X-Frame-Options 设置成 deny , 按如下配置去设置你的站点：</p>
+<pre><code>Header set X-Frame-Options "deny"
+</code></pre><p>要将 Apache 的配置 X-Frame-Options 设置成 allow-from，在配置里添加：</p>
+<pre><code>Header set X-Frame-Options "allow-from https://example.com/"
+</code></pre><h3 id="3-3-配置-nginx"><a href="#3-3-配置-nginx" class="headerlink" title="3.3 配置 nginx"></a>3.3 配置 nginx</h3><p>配置 nginx 发送 X-Frame-Options 响应头，把下面这行添加到 ‘http’, ‘server’ 或者 ‘location’ 的配置中:</p>
+<p>例如：<br>1.修改配置</p>
+<pre><code>add_header X-Frame-Options allowall always;
+</code></pre><p><img src="/2021/02/23/x-frame-options-sameorigin/nginx设置xfo.png" alt=""><br>2.nginx指定目下生效配置</p>
+<pre><code>cd ../usr/sbin/
+./nginx -s reload 
+</code></pre><p>3.检测是否配置成功</p>
+<pre><code>curl -I http://192.168.2.2:5091
+</code></pre><p><img src="/2021/02/23/x-frame-options-sameorigin/检测xfo配置.png" alt=""></p>
+<h3 id="3-4-配置-IIS"><a href="#3-4-配置-IIS" class="headerlink" title="3.4 配置 IIS"></a>3.4 配置 IIS</h3><p>配置 IIS 发送 X-Frame-Options 响应头，添加下面的配置到 Web.config 文件中：</p>
+<pre><code>&lt;system.webServer&gt;
+  ...
+
+  &lt;httpProtocol&gt;
+    &lt;customHeaders&gt;
+      &lt;add name="X-Frame-Options" value="sameorigin" /&gt;
+    &lt;/customHeaders&gt;
+  &lt;/httpProtocol&gt;
+
+  ...
+&lt;/system.webServer&gt;
+</code></pre><h3 id="3-5-配置-HAProxy"><a href="#3-5-配置-HAProxy" class="headerlink" title="3.5 配置 HAProxy"></a>3.5 配置 HAProxy</h3><p>配置 HAProxy 发送 X-Frame-Options 头，添加这些到你的前端、监听 listen，或者后端的配置里面：</p>
+<pre><code>rspadd X-Frame-Options:\ sameorigin
+</code></pre><p>或者，在更加新的版本中：</p>
+<pre><code>http-response set-header X-Frame-Options sameorigin
+</code></pre><h3 id="3-6-配置-Express"><a href="#3-6-配置-Express" class="headerlink" title="3.6 配置 Express"></a>3.6 配置 Express</h3><p>要配置 Express 可以发送 X-Frame-Options header，你可以用借助了 frameguard 来设置头部的 helmet。在你的服务器配置里面添加：</p>
+<pre><code>const helmet = require('helmet');
+const app = express();
+app.use(helmet.frameguard({ action: "sameorigin" }));
+</code></pre><p>或者，你也可以直接用 frameguard：</p>
+<pre><code>const frameguard = require('frameguard')
+app.use(frameguard({ action: 'sameorigin' }))
+</code></pre><h2 id="4-测评"><a href="#4-测评" class="headerlink" title="4.测评"></a>4.测评</h2><p><img src="/2021/02/23/x-frame-options-sameorigin/xfo浏览器兼容性.png" alt=""></p>
+<h1 id="三、最终结果"><a href="#三、最终结果" class="headerlink" title="三、最终结果"></a>三、最终结果</h1><p>1.猜测优酷开启了同源策略（sameorigin），所以我们的iframe无法内嵌其网页<br>2.解决方案，亲测可以<br><img src="/2021/02/23/x-frame-options-sameorigin/优酷嵌套解决方案.png" alt=""></p>
+<h1 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h1><p><img src="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/X-Frame-Options?redirectlocale=en-US&amp;redirectslug=The_X-FRAME-OPTIONS_response_header" alt="传送门1"><br><img src="https://blog.csdn.net/qq_37193537/article/details/87086279" alt="传送门2"><br><img src="http://cache.baiducontent.com/c?m=3yKvnBrULyInsKWE7o8-f-6T7oLBHdh_3ik8_2xWhZPlUb24PUsDN9GFVDND2_mXqgz5sID004p1CYGUGH4-PAFe5YHy-yTnyGyALm7JjXmBfZs2H32ZGXZ2r0JXwIRezabWPAM2JKQvKGpYGCUhbK&amp;p=877ec54ad1c352fc57eff86d4f53&amp;newp=c46fd315d9c441f50be29627610792695803ed6338d1db01298ffe0cc4241a1a1a3aecbf2c231305d6c4786306aa4f5bebf53571360634f1f689df08d2ecce7e75&amp;s=cfcd208495d565ef&amp;user=baidu&amp;fm=sc&amp;query=youku+sameorigin&amp;qid=e61d7d2500073cd4&amp;p1=2" alt="传送门3"></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.tanguo.store/2021/02/21/3ordercube/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2489,206 +2791,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.tanguo.store/2020/10/23/hexo-manual/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="571">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/btc-v.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TANGUO STORE">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/10/23/hexo-manual/" itemprop="url">Hexo操作手册</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表</span>
-              
-              <time title="创建" itemprop="dateCreated datePublished" datetime="2020-10-23T16:46:36+08:00">
-                2020-10-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/手册/" itemprop="url" rel="index">
-                    <span itemprop="name">手册</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/10/23/hexo-manual/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/10/23/hexo-manual/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020/10/23/hexo-manual/" class="leancloud_visitors" data-flag-title="Hexo操作手册">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">访客&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  361 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">耗时 &asymp;</span>
-                
-                <span title="耗时">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>A fast, simple &amp; powerful blog framework</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/10/23/hexo-manual/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2743,7 +2845,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2754,7 +2856,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2765,7 +2867,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.tanguo.store/"/>
-  <updated>2021-02-21T12:43:43.000Z</updated>
+  <updated>2021-02-23T08:26:35.000Z</updated>
   <id>http://blog.tanguo.store/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记iframe/frame内嵌网页不显示问题</title>
+    <link href="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/"/>
+    <id>http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/</id>
+    <published>2021-02-23T08:26:35.000Z</published>
+    <updated>2021-02-23T08:26:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://blog.tanguo.store/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://blog.tanguo.store/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="HTTP" scheme="http://blog.tanguo.store/tags/HTTP/"/>
+    
+      <category term="X-Frame-Options" scheme="http://blog.tanguo.store/tags/X-Frame-Options/"/>
+    
+  </entry>
   
   <entry>
     <title>三阶魔方教程</title>
