@@ -25,16 +25,8 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1
-        
-      
+      &lt;blockquote&gt;
+&lt;p&gt;前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     

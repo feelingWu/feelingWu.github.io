@@ -97,13 +97,13 @@
 
 
 
-<meta name="description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)  一、预备知识点1.同源策略1.1 什么是同源URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。相反，只要协议，域名，端口有任何一个的不同，就被当作是跨域。 1">
+<meta name="description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)">
 <meta name="keywords" content="前端,HTTP,X-Frame-Options">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记iframe&#x2F;frame内嵌网页不显示问题">
 <meta property="og:url" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/index.html">
 <meta property="og:site_name" content="TANGUO STORE">
-<meta property="og:description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)  一、预备知识点1.同源策略1.1 什么是同源URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。相反，只要协议，域名，端口有任何一个的不同，就被当作是跨域。 1">
+<meta property="og:description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/同源演示.png">
 <meta property="og:image" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/nginx设置xfo.png">
@@ -116,7 +116,7 @@
 <meta property="og:updated_time" content="2021-02-23T08:26:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记iframe&#x2F;frame内嵌网页不显示问题">
-<meta name="twitter:description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)  一、预备知识点1.同源策略1.1 什么是同源URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。相反，只要协议，域名，端口有任何一个的不同，就被当作是跨域。 1">
+<meta name="twitter:description" content="前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)">
 <meta name="twitter:image" content="http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/同源演示.png">
 
 
@@ -456,7 +456,7 @@
 
       
         <blockquote>
-<p>前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)</p>
+<p>前端同事内嵌网页,发现个别网页无法显示并提示,”in a frame because it set ‘X-Frame-Options’ to ‘sameorigin’”的报错(如：youku视频)<br><a id="more"></a></p>
 </blockquote>
 <h1 id="一、预备知识点"><a href="#一、预备知识点" class="headerlink" title="一、预备知识点"></a>一、预备知识点</h1><h2 id="1-同源策略"><a href="#1-同源策略" class="headerlink" title="1.同源策略"></a>1.同源策略</h2><h3 id="1-1-什么是同源"><a href="#1-1-什么是同源" class="headerlink" title="1.1 什么是同源"></a>1.1 什么是同源</h3><p>URL由协议、域名、端口和路径组成，如果两个URL的协议、域名和端口相同，则表示他们同源。相反，只要协议，域名，端口有任何一个的不同，就被当作是跨域。<br><img src="/2021/02/23/x-frame-options-sameorigin/同源演示.png" alt=""></p>
 <h3 id="1-2-同源策略-Same-Origin-Policy-SOP"><a href="#1-2-同源策略-Same-Origin-Policy-SOP" class="headerlink" title="1.2 同源策略(Same-Origin-Policy(SOP))"></a>1.2 同源策略(Same-Origin-Policy(SOP))</h3><p>浏览器默认采用同源策略，禁止页面加载或执行与自身来源不同的域的任何脚本。</p>
