@@ -1061,7 +1061,7 @@ Innodb_row_lock_waits: 系统启动后到现在总共等待的次数
 </ul>
 <h3 id="6-常用SQL技巧"><a href="#6-常用SQL技巧" class="headerlink" title="6. 常用SQL技巧"></a>6. 常用SQL技巧</h3><h4 id="6-1-SQL执行顺序"><a href="#6-1-SQL执行顺序" class="headerlink" title="6.1 SQL执行顺序"></a>6.1 SQL执行顺序</h4><p>编写顺序</p>
 <pre class=" language-SQL"><code class="language-SQL">SELECT DISTINCT
-    <select list>
+    <select list="">
 FROM
     <left_table> <join_type>
 JOIN
@@ -1076,7 +1076,7 @@ ORDER BY
     <order_by_condition>
 LIMIT
     <limit_params>
-</code></pre>
+</limit_params></order_by_condition></having_condition></group_by_list></where_condition></join_condition></right_table></join_type></left_table></select></code></pre>
 <p>执行顺序</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">FROM</span>    <span class="token operator">&lt;</span>left_table<span class="token operator">></span>
 
