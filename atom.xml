@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.tanguo.store/"/>
-  <updated>2021-02-23T08:26:35.000Z</updated>
+  <updated>2021-02-24T02:33:22.000Z</updated>
   <id>http://blog.tanguo.store/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件开发手册</title>
+    <link href="http://blog.tanguo.store/2021/02/24/software-development-manual/"/>
+    <id>http://blog.tanguo.store/2021/02/24/software-development-manual/</id>
+    <published>2021-02-24T02:33:22.000Z</published>
+    <updated>2021-02-24T02:33:22.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;无规矩不成方圆&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="手册" scheme="http://blog.tanguo.store/categories/%E6%89%8B%E5%86%8C/"/>
+    
+    
+      <category term="手册" scheme="http://blog.tanguo.store/tags/%E6%89%8B%E5%86%8C/"/>
+    
+      <category term="软件开发" scheme="http://blog.tanguo.store/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>记frame/iframe内嵌网页不显示问题</title>
@@ -294,27 +317,27 @@
   </entry>
   
   <entry>
-    <title>Docker,轻量级的虚拟化技术</title>
-    <link href="http://blog.tanguo.store/2020/10/23/docker/"/>
-    <id>http://blog.tanguo.store/2020/10/23/docker/</id>
+    <title>Linux Installs</title>
+    <link href="http://blog.tanguo.store/2020/10/23/linux-installs/"/>
+    <id>http://blog.tanguo.store/2020/10/23/linux-installs/</id>
     <published>2020-10-23T08:46:36.000Z</published>
     <updated>2020-10-23T08:46:36.000Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;一个利用了lxc的技术的一个虚拟化引擎。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;Linux 软件工具安装&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
       <category term="后端" scheme="http://blog.tanguo.store/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="docker" scheme="http://blog.tanguo.store/tags/docker/"/>
-    
       <category term="运维" scheme="http://blog.tanguo.store/tags/%E8%BF%90%E7%BB%B4/"/>
     
       <category term="后端" scheme="http://blog.tanguo.store/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="linux" scheme="http://blog.tanguo.store/tags/linux/"/>
     
   </entry>
   
@@ -345,27 +368,27 @@
   </entry>
   
   <entry>
-    <title>Linux Installs</title>
-    <link href="http://blog.tanguo.store/2020/10/23/linux-installs/"/>
-    <id>http://blog.tanguo.store/2020/10/23/linux-installs/</id>
+    <title>Docker,轻量级的虚拟化技术</title>
+    <link href="http://blog.tanguo.store/2020/10/23/docker/"/>
+    <id>http://blog.tanguo.store/2020/10/23/docker/</id>
     <published>2020-10-23T08:46:36.000Z</published>
     <updated>2020-10-23T08:46:36.000Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;Linux 软件工具安装&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+      &lt;h1 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;一个利用了lxc的技术的一个虚拟化引擎。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
       <category term="后端" scheme="http://blog.tanguo.store/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
+      <category term="docker" scheme="http://blog.tanguo.store/tags/docker/"/>
+    
       <category term="运维" scheme="http://blog.tanguo.store/tags/%E8%BF%90%E7%BB%B4/"/>
     
       <category term="后端" scheme="http://blog.tanguo.store/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="linux" scheme="http://blog.tanguo.store/tags/linux/"/>
     
   </entry>
   

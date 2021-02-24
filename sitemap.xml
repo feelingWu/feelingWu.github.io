@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.tanguo.store/2021/02/24/software-development-manual/</loc>
+    
+    <lastmod>2021-02-24T02:33:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.tanguo.store/2021/02/23/x-frame-options-sameorigin/</loc>
     
     <lastmod>2021-02-23T08:26:35.000Z</lastmod>
@@ -86,7 +93,7 @@
   </url>
   
   <url>
-    <loc>http://blog.tanguo.store/2020/10/23/docker/</loc>
+    <loc>http://blog.tanguo.store/2020/10/23/linux-installs/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     
@@ -100,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://blog.tanguo.store/2020/10/23/linux-installs/</loc>
+    <loc>http://blog.tanguo.store/2020/10/23/docker/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     
