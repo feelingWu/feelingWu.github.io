@@ -23,20 +23,6 @@
   </url>
   
   <url>
-    <loc>http://blog.tanguo.store/2021/02/19/tingzheji2021/</loc>
-    
-    <lastmod>2021-02-19T13:18:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.tanguo.store/2021/02/19/plan2021/</loc>
-    
-    <lastmod>2021-02-19T12:45:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.tanguo.store/2021/01/23/mysql-advanced-4/</loc>
     
     <lastmod>2021-01-23T01:57:01.000Z</lastmod>
@@ -93,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://blog.tanguo.store/2020/10/23/hexo-manual/</loc>
-    
-    <lastmod>2020-10-23T08:46:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.tanguo.store/2020/10/23/docker/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
@@ -108,6 +87,13 @@
   
   <url>
     <loc>http://blog.tanguo.store/2020/10/23/linux-installs/</loc>
+    
+    <lastmod>2020-10-23T08:46:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.tanguo.store/2020/10/23/hexo-manual/</loc>
     
     <lastmod>2020-10-23T08:46:36.000Z</lastmod>
     

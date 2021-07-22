@@ -88,48 +88,6 @@
   </entry>
   
   <entry>
-    <title>听者记2021</title>
-    <link href="http://blog.tanguo.store/2021/02/19/tingzheji2021/"/>
-    <id>http://blog.tanguo.store/2021/02/19/tingzheji2021/</id>
-    <published>2021-02-19T13:18:10.000Z</published>
-    <updated>2021-02-19T13:18:10.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;涉猎阅未闻,蹔使心魂澄&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="视野" scheme="http://blog.tanguo.store/categories/%E8%A7%86%E9%87%8E/"/>
-    
-    
-      <category term="视野" scheme="http://blog.tanguo.store/tags/%E8%A7%86%E9%87%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计划2021</title>
-    <link href="http://blog.tanguo.store/2021/02/19/plan2021/"/>
-    <id>http://blog.tanguo.store/2021/02/19/plan2021/</id>
-    <published>2021-02-19T12:45:05.000Z</published>
-    <updated>2021-02-19T12:45:05.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;以教为学,有输入有输出&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="计划" scheme="http://blog.tanguo.store/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="计划" scheme="http://blog.tanguo.store/tags/%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MySQL数据库优化之组合拳(四)</title>
     <link href="http://blog.tanguo.store/2021/01/23/mysql-advanced-4/"/>
     <id>http://blog.tanguo.store/2021/01/23/mysql-advanced-4/</id>
@@ -317,32 +275,6 @@
   </entry>
   
   <entry>
-    <title>Hexo操作手册</title>
-    <link href="http://blog.tanguo.store/2020/10/23/hexo-manual/"/>
-    <id>http://blog.tanguo.store/2020/10/23/hexo-manual/</id>
-    <published>2020-10-23T08:46:36.000Z</published>
-    <updated>2020-10-23T08:46:36.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;A fast, simple &amp;amp; powerful blog framework&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="手册" scheme="http://blog.tanguo.store/categories/%E6%89%8B%E5%86%8C/"/>
-    
-    
-      <category term="手册" scheme="http://blog.tanguo.store/tags/%E6%89%8B%E5%86%8C/"/>
-    
-      <category term="博客" scheme="http://blog.tanguo.store/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="hexo" scheme="http://blog.tanguo.store/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Docker,轻量级的虚拟化技术</title>
     <link href="http://blog.tanguo.store/2020/10/23/docker/"/>
     <id>http://blog.tanguo.store/2020/10/23/docker/</id>
@@ -389,6 +321,32 @@
       <category term="后端" scheme="http://blog.tanguo.store/tags/%E5%90%8E%E7%AB%AF/"/>
     
       <category term="linux" scheme="http://blog.tanguo.store/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo操作手册</title>
+    <link href="http://blog.tanguo.store/2020/10/23/hexo-manual/"/>
+    <id>http://blog.tanguo.store/2020/10/23/hexo-manual/</id>
+    <published>2020-10-23T08:46:36.000Z</published>
+    <updated>2020-10-23T08:46:36.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;A fast, simple &amp;amp; powerful blog framework&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="手册" scheme="http://blog.tanguo.store/categories/%E6%89%8B%E5%86%8C/"/>
+    
+    
+      <category term="手册" scheme="http://blog.tanguo.store/tags/%E6%89%8B%E5%86%8C/"/>
+    
+      <category term="博客" scheme="http://blog.tanguo.store/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="hexo" scheme="http://blog.tanguo.store/tags/hexo/"/>
     
   </entry>
   
