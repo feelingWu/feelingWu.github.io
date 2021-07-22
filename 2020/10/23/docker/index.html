@@ -1060,35 +1060,34 @@ ENV PATH $JAVA_HOME/bin:$PATH
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/10/23/hexo-manual/">
+                <a href="/2020/11/28/system-optimize/">
                     <div class="card-image">
                         
-                        <img src="/cover/inner/0x1-5-1.png" class="responsive-img" alt="Hexo操作手册">
+                        <img src="/cover/" class="responsive-img" alt="系统优化小记：CPU长时间满负荷运行">
                         
-                        <span class="card-title">Hexo操作手册</span>
+                        <span class="card-title">系统优化小记：CPU长时间满负荷运行</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-A fast, simple &amp; powerful blog framework
+CPU长时间满负荷运行,一次入门级降CPU系统优化实战
 
 
-官方网站：https://hexo.io/zh-cn/docs/configuration
-常用命令清除缓存文件 (db.json) 和已生成的
+现象用户量增大,线上一个Java单应用服务长时间占用服务器CPU达到400%，使得接口响应速度非常慢，线程拥堵，出现各种响应超时问题，即便有时候没有用户操作，也会长时间占用大量C
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-28
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/手册/" class="post-category">
-                                    手册
+                            <a href="/categories/编程/" class="post-category">
+                                    编程
                                 </a>
                             
                             
@@ -1098,16 +1097,16 @@ A fast, simple &amp; powerful blog framework
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/手册/">
-                        <span class="chip bg-color">手册</span>
+                    <a href="/tags/运维/">
+                        <span class="chip bg-color">运维</span>
                     </a>
                     
-                    <a href="/tags/博客/">
-                        <span class="chip bg-color">博客</span>
+                    <a href="/tags/后端/">
+                        <span class="chip bg-color">后端</span>
                     </a>
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/系统优化/">
+                        <span class="chip bg-color">系统优化</span>
                     </a>
                     
                 </div>
@@ -1121,23 +1120,25 @@ A fast, simple &amp; powerful blog framework
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/23/linux-installs/">
+                <a href="/2020/10/23/docker-installs/">
                     <div class="card-image">
                         
-                        <img src="/cover/linux-1.jpg" class="responsive-img" alt="Linux Installs">
+                        <img src="/cover/docker-2.png" class="responsive-img" alt="Docker Installs">
                         
-                        <span class="card-title">Linux Installs</span>
+                        <span class="card-title">Docker Installs</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-Linux 软件工具安装
+docker 安装软件工具
 
-安装Java通过yum方式安装Java查看JDK是否已安装# yum list installed | grep java
-若已经安装了JDK，如何卸载Java环境？
-卸载JDK相关文件：# yum -y re
+准备工作docker准备工作传送门
+命令快捷
+查看镜像# docker images | grep ?
+
+启动容器# docker run -id --name=matrix_mysql -p 13306:3
                         
                     </div>
                     <div class="publish-info">
@@ -1159,16 +1160,16 @@ Linux 软件工具安装
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
                     <a href="/tags/运维/">
                         <span class="chip bg-color">运维</span>
                     </a>
                     
                     <a href="/tags/后端/">
                         <span class="chip bg-color">后端</span>
-                    </a>
-                    
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>

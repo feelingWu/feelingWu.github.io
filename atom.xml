@@ -250,6 +250,31 @@
   </entry>
   
   <entry>
+    <title>Docker,轻量级的虚拟化技术</title>
+    <link href="http://blog.tanguo.store/2020/10/23/docker/"/>
+    <id>http://blog.tanguo.store/2020/10/23/docker/</id>
+    <published>2020-10-23T08:46:36.000Z</published>
+    <updated>2020-10-23T08:46:36.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;一个利用了lxc的技术的一个虚拟化引擎。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="http://blog.tanguo.store/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="docker" scheme="http://blog.tanguo.store/tags/docker/"/>
+    
+      <category term="运维" scheme="http://blog.tanguo.store/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="后端" scheme="http://blog.tanguo.store/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker Installs</title>
     <link href="http://blog.tanguo.store/2020/10/23/docker-installs/"/>
     <id>http://blog.tanguo.store/2020/10/23/docker-installs/</id>
@@ -297,31 +322,6 @@
       <category term="博客" scheme="http://blog.tanguo.store/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://blog.tanguo.store/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker,轻量级的虚拟化技术</title>
-    <link href="http://blog.tanguo.store/2020/10/23/docker/"/>
-    <id>http://blog.tanguo.store/2020/10/23/docker/</id>
-    <published>2020-10-23T08:46:36.000Z</published>
-    <updated>2020-10-23T08:46:36.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Docker&quot;&gt;&lt;a href=&quot;#Docker&quot; class=&quot;headerlink&quot; title=&quot;Docker&quot;&gt;&lt;/a&gt;Docker&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;一个利用了lxc的技术的一个虚拟化引擎。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="后端" scheme="http://blog.tanguo.store/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="docker" scheme="http://blog.tanguo.store/tags/docker/"/>
-    
-      <category term="运维" scheme="http://blog.tanguo.store/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-      <category term="后端" scheme="http://blog.tanguo.store/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
